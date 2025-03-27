@@ -1,0 +1,335 @@
+{
+  "setting": {
+    "WebTitle": "桃園市政府原住民族教育資源中心",
+    "SideTitle": "Taoyuan Indigenous Education Resource Center"
+  },
+  "menuList": [
+    {
+      "groupName": "認識我們",
+      "englishName": "About Us",
+      "icon": [
+        "fas",
+        "house-chimney"
+      ],
+      "items": [
+        {
+          "name": "中心簡介",
+          "englishName": "Center Introduction",
+          "icon": [
+            "fas",
+            "circle-exclamation"
+          ],
+          "path": "/info/calendar"
+        },
+        {
+          "name": "中心任務",
+          "englishName": "Central Mission",
+          "icon": [
+            "fas",
+            "notes-medical"
+          ],
+          "path": "/info/organization"
+        },
+        {
+          "name": "組織分工",
+          "englishName": "Logo",
+          "icon": [
+            "fas",
+            "share-from-square"
+          ],
+          "path": "/info/logo"
+        },
+        {
+          "name": "聯絡我們",
+          "englishName": "Logo",
+          "icon": [
+            "fas",
+            "share-from-square"
+          ],
+          "path": "/activity"
+        }
+      ],
+      "ShowItem": false
+    },
+    {
+      "groupName": "活動相簿",
+      "englishName": "Announce",
+      "icon": [
+        "fas",
+        "newspaper"
+      ],
+      "path": "https://drive.google.com/drive/folders/1NCwZjABuLDNoV599w4rxBv9uV7xhVvw2?usp=drive_link",
+      "items": [],
+      "ShowItem": false
+    },
+    {
+      "groupName": "教材資源",
+      "englishName": "Resources",
+      "icon": [
+        "fas",
+        "address-card"
+      ],
+      "items": [
+        {
+          "name": "泰雅",
+          "englishName": "Schedule",
+          "icon": [
+            "fas",
+            "file-lines"
+          ],
+          "path": "/competition/schedule"
+        },
+        {
+          "name": "布農",
+          "englishName": "Files",
+          "icon": [
+            "fas",
+            "people-line"
+          ],
+          "path": "/competition/file"
+        },
+        {
+          "name": "排灣",
+          "englishName": "Excellent Instructor",
+          "icon": [
+            "fas",
+            "people-roof"
+          ],
+          "path": "/competition/excellentInstructor"
+        },
+        {
+          "name": "太鲁閣",
+          "englishName": "Award",
+          "icon": [
+            "fas",
+            "chalkboard-user"
+          ],
+          "path": "/competition/award"
+        },
+        {
+          "name": "阿美",
+          "englishName": "Award",
+          "icon": [
+            "fas",
+            "chalkboard-user"
+          ],
+          "path": "/competition/award"
+        },
+        {
+          "name": "部落大學電子書",
+          "englishName": "Award",
+          "icon": [
+            "fas",
+            "chalkboard-user"
+          ],
+          "path": "/competition/award"
+        },
+        {
+          "name": "檔案下載",
+          "englishName": "Award",
+          "icon": [
+            "fas",
+            "chalkboard-user"
+          ],
+          "path": "https://drive.google.com/drive/folders/1yfgnTe6x0Ul4pMyvVxhj7lVwITUCYTtd?usp=drive_link"
+        },
+        {
+          "name": "典藏文物",
+          "englishName": "Award",
+          "icon": [
+            "fas",
+            "chalkboard-user"
+          ],
+          "path": "https://docs.google.com/spreadsheets/d/13ccpNo4Jnsgkq2IpwbZQ-4xReCI0e8RZVMs643HT3P0/edit?usp=sharing"
+        }
+      ],
+      "ShowItem": false
+    },
+    {
+      "groupName": "策盟成果",
+      "englishName": "Achievements",
+      "icon": [
+        "fas",
+        "link"
+      ],
+      "items": [
+        {
+          "name": "111學年度策盟成果",
+          "englishName": "Celebration Opening",
+          "icon": [
+            "fas",
+            "arrow-up-right-from-square"
+          ],
+          "path": "/fair/method"
+        },
+        {
+          "name": "110學年度策盟成果",
+          "englishName": "AwardProcess",
+          "icon": [
+            "fas",
+            "paperclip"
+          ],
+          "path": "/fair/stall"
+        },
+        {
+          "name": "復興區策盟成果",
+          "englishName": "Opening LIVE",
+          "icon": [
+            "fas",
+            "book"
+          ],
+          "path": "/fair/themePavilion"
+        },
+        {
+          "name": "成果填報",
+          "englishName": "Award LIVE",
+          "icon": [
+            "fas",
+            "medal"
+          ],
+          "path": "/fair/radioProgramList"
+        }
+      ],
+      "ShowItem": false
+    },
+    {
+      "groupName": "各子計畫",
+      "englishName": "Plans",
+      "icon": [
+        "fas",
+        "users"
+      ],
+      "items": [
+        {
+          "name": "影音紀錄",
+          "englishName": "Contact Us",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/contact"
+        },
+        {
+          "name": "課後族語班",
+          "englishName": "Accommodation Information",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/accommodation"
+        },
+        {
+          "name": "原住民族教育數位平台",
+          "englishName": "Gift Information",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/gift"
+        },
+        {
+          "name": "原住民族知識體系",
+          "englishName": "Traffic Information",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/traffic"
+        },
+        {
+          "name": "師資培訓",
+          "englishName": "Parking Information",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/parking"
+        },
+        {
+          "name": "三一教學",
+          "englishName": "Traffic Floor Plan",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/trafficFloorPlan"
+        },
+        {
+          "name": "多元方案",
+          "englishName": "Shuttle Bus",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/shuttle"
+        },
+        {
+          "name": "教材編輯",
+          "englishName": "Shuttle Bus Map",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/shuttleMap"
+        }
+      ],
+      "ShowItem": false
+    },
+    {
+      "groupName": "好站連結",
+      "englishName": "Links",
+      "icon": [
+        "fas",
+        "link"
+      ],
+      "items": [
+        {
+          "name": "政府機關",
+          "englishName": "Contact Us",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/fair/method"
+        },
+        {
+          "name": "教育學習",
+          "englishName": "Accommodation Information",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/fair/stall"
+        },
+        {
+          "name": "研究單位",
+          "englishName": "Gift Information",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/fair/themePavilion"
+        },
+        {
+          "name": "財團法人",
+          "englishName": "Traffic Information",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/fair/radioProgramList"
+        },
+        {
+          "name": "原教中心",
+          "englishName": "Parking Information",
+          "icon": [
+            "fas",
+            "clipboard"
+          ],
+          "path": "/serve/parking"
+        }
+      ],
+      "ShowItem": false
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  body {
+    @apply overflow-hidden;
+  }
+  header {
+    @apply fixed w-screen h-[200px] z-20 ;
+  }
+
+  .HeaderTitle {
+    @apply text-defaultColor flex items-center justify-around text-base md:text-lg relative left-[35px] md:left-[0px] top-[50%] translate-y-[-50%] font-bold;
+  }
+
+  main {
+    @apply flex flex-wrap ;
+  }
+
+  .MenuBox {
+    @apply fixed overflow-y-hidden md:overflow-visible  text-start md:text-center left-0 md:flex h-[88%] rounded-r-2xl md:rounded-none w-5/6 md:w-full md:h-auto z-20 top-[150px] overflow-x-auto bg-white/90;
+  }
+
+  .MenuBar {
+    @apply select-none md:hidden h-[200px] left-0 text-defaultColor text-2xl flex  justify-center items-center  fixed  z-[50];
+  }
+
+  .MenuBar svg {
+    @apply mr-2 cursor-pointer;
+  }
+
+  .MenuGroupTitle {
+    @apply p-[10px] text-xs xl:text-lg  select-none cursor-pointer  whitespace-nowrap;
+  }
+
+  .MenuGroupTitle svg {
+    @apply mr-2 text-gray-600;
+  }
+
+  .ContentBox {
+    @apply relative w-full h-full overflow-y-hidden px-8 py-8 pt-[200px] z-0;
+  }
+
+  .MenuActive {
+    @apply bg-gradient-to-r from-gray-200 border-l-2 border-gray-300;
+  }
+}
+
+.ContentBox,header {
+  /* background-color: 	#eae8e8; */
+  background-image: url("/public/images/bg.png");
+  background-size: cover;
+  background-attachment:fixed ;
+}
+
+.ContentBox::-webkit-scrollbar {
+  display: none;
+}
