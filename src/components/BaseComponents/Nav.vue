@@ -2,7 +2,9 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import logoImageUrl from "/images/logo.jpg";
+import Link from "@/components/BaseComponents/Link.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+
 import { useI18n } from "vue-i18n";
 const { t, locale } = useI18n();
 
@@ -43,7 +45,7 @@ window.addEventListener("load", () => {
         <font-awesome-icon :icon="['fas', 'bars']" />
       </div>
       <div class="flex justify-center md:justify-start items-center w-3/4 md:w-3/12 2xl:w-auto">
-        <a href="/" class="flex items-center">
+        <router-link to="/" class="flex items-center">
           <img class="mx-2 h-14 object-contain rounded-full animate__animated animate__rollIn animate__fast"
             :src="logoImageUrl" alt="logo" />
           <div class="text-start mx-2 w-auto animate__animated animate__fadeInLeft animate__fast">
@@ -53,7 +55,7 @@ window.addEventListener("load", () => {
               {{ t(`SideTitle`) }}
             </p>
           </div>
-        </a>
+        </router-link>
       </div>
       <!--電腦選單內容 開始-->
       <div v-show="isMenuVisible"
@@ -61,24 +63,24 @@ window.addEventListener("load", () => {
         <div v-for="(Group, Index) in model.menuList" :key="'Group_' + Index" @mouseover="Group.ShowItem = true"
           @mouseleave="Group.ShowItem = false" class="transition-all mx-1 relative py-4">
           <div :class="{ 'hover:bg-gray-300': Group.items.length == 0 }"
-            class="hover:bg-gray-300 cursor-pointer me-2 my-1 py-2">
-            <a :href="Group.path" @click="Group.ShowItem = !Group.ShowItem">
-              <div>
-                <font-awesome-icon :icon="Group.icon" />
-                {{ t(`menuList.${Group.groupName}`) }}
-                <font-awesome-icon :icon="['fas', 'caret-down']" v-if="Group.items.length > 0" />
-              </div>
-              <div v-if="Group.ShowItem && Group.items.length > 0"
-                class="flex flex-col md:absolute top-16 left-[50%] translate-x-[-50%] min-w-[160px] z-10 w-auto bg-defaultBg/90 rounded-b-lg px-2 py-4 mx-2 animate__animated animate__fadeIn animate__fast">
-                <a v-for="Item in Group.items" :href="Item.path" :class="{ MenuActive: currentRouteName == Item.name }"
-                  class="my-2 hover:bg-gray-300 text-start flex">
-                  <font-awesome-icon :icon="Item.icon" />
-                  <p class="ms-1 w-auto inline-block whitespace-nowrap">
-                    {{ t(`menuList.${Item.name}`) }}
-                  </p>
-                </a>
-              </div>
-            </a>
+            class="hover:bg-gray-300 cursor-pointer me-2 my-1 py-2" @click="Group.ShowItem = !Group.ShowItem">
+            <Link :path="Group.path || ''">
+            <div>
+              <font-awesome-icon :icon="Group.icon" />
+              {{ t(`menuList.${Group.groupName}`) }}
+              <font-awesome-icon :icon="['fas', 'caret-down']" v-if="Group.items.length > 0" />
+            </div>
+            </Link>
+            <div v-if="Group.ShowItem && Group.items.length > 0"
+              class="flex flex-col md:absolute top-16 left-[50%] translate-x-[-50%] min-w-[160px] z-10 w-auto bg-defaultBg/90 rounded-b-lg px-2 py-4 mx-2 animate__animated animate__fadeIn animate__fast">
+              <Link v-for="Item in Group.items" :path="Item.path || ''"
+                :class="{ MenuActive: currentRouteName == Item.name }" class="my-2 hover:bg-gray-300 text-start flex">
+              <font-awesome-icon :icon="Item.icon" />
+              <p class="ms-1 w-auto inline-block whitespace-nowrap">
+                {{ t(`menuList.${Item.name}`) }}
+              </p>
+              </Link>
+            </div>
           </div>
         </div>
         <!-- <a href="/login" class="transition-all hover:bg-gray-300 cursor-pointer me-2 my-1">
@@ -100,29 +102,29 @@ window.addEventListener("load", () => {
       <div v-show="isMenuVisible" id="mobileMenu"
         class="md:hidden flex flex-col justify-start absolute my-[105px] pb-[80px] top-0 left-[-2rem] text-defaultColor text-xl w-full text-start bg-defaultBg/90 rounded overflow-x-auto overflow-y-scroll animate__animated animate__fadeInLeft animate__fast">
         <div v-for="(Group, Index) in model.menuList" :key="'Group_' + Index" class="transition-all">
-          <div class="cursor-pointer my-3">
-            <a :href="Group.path" @click="Group.ShowItem = !Group.ShowItem" class="relative">
-              <div>
-                <font-awesome-icon class="pl-5" :icon="Group.icon" />
-                {{ t(`menuList.${Group.groupName}`) }}
-                <font-awesome-icon :icon="['fas', 'caret-down']" v-if="Group.items.length > 0" />
-              </div>
-              <div v-if="Group.ShowItem && Group.items.length > 0"
-                class="flex flex-col md:absolute top-0 left-0 min-w-[160px] w-auto text-defaultColor rounded-b-lg px-2 pt-2 mt-2 ms-8 animate__animated animate__fadeInLeft animate__fast">
-                <a v-for="Item in Group.items" :href="Item.path" :class="{ MenuActive: currentRouteName == Item.name }"
-                  class="my-2 text-start flex">
-                  <font-awesome-icon :icon="Item.icon" />
-                  <p class="ms-1 w-auto inline-block whitespace-nowrap">
-                    {{ t(`menuList.${Item.name}`) }}
-                  </p>
-                </a>
-              </div>
-            </a>
+          <div class="cursor-pointer my-3" @click="Group.ShowItem = !Group.ShowItem">
+            <Link :path="Group.path || ''" class="relative">
+            <div>
+              <font-awesome-icon class="pl-5" :icon="Group.icon" />
+              {{ t(`menuList.${Group.groupName}`) }}
+              <font-awesome-icon :icon="['fas', 'caret-down']" v-if="Group.items.length > 0" />
+            </div>
+            <div v-if="Group.ShowItem && Group.items.length > 0"
+              class="flex flex-col md:absolute top-0 left-0 min-w-[160px] w-auto text-defaultColor rounded-b-lg px-2 pt-2 mt-2 ms-8 animate__animated animate__fadeInLeft animate__fast">
+              <Link v-for="Item in Group.items" :path="Item.path || ''"
+                :class="{ MenuActive: currentRouteName == Item.name }" class="my-2 text-start flex">
+              <font-awesome-icon :icon="Item.icon" />
+              <p class="ms-1 w-auto inline-block whitespace-nowrap">
+                {{ t(`menuList.${Item.name}`) }}
+              </p>
+              </Link>
+            </div>
+            </Link>
           </div>
         </div>
-        <a href="/login" class="transition-all hover:bg-gray-300 cursor-pointer me-2 my-1">
+        <router-link to="/login" class="transition-all hover:bg-gray-300 cursor-pointer me-2 my-1">
           <font-awesome-icon :icon="['fas', 'right-to-bracket']" />
-          系統登入</a>
+          系統登入</router-link>
       </div>
       <!--手機選單內容 結束-->
     </div>

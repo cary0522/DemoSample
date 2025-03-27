@@ -90,14 +90,15 @@ window.addEventListener("load", () => {
     <!--Logo-->
     <div class="AdminHeaderBoxFloat">
       <div class="AdminHeaderLogo">
-        <a href="/"><img :src="logoImageUrl" alt="logo" class='rounded-full object-contain' /></a>
+        <router-link to="/"><img :src="logoImageUrl" alt="logo" class='rounded-full object-contain' /></router-link>
       </div>
     </div>
     <!--Logo End-->
     <!--Title Start-->
     <div class="AdminHeaderTitle">
       <div class="mx-4 md:hidden w-[50px] object-contain">
-        <a href="/"><img class="mx-4 rounded-full object-contain" :src="logoImageUrl" alt="logo" /></a>
+        <router-link to="/"><img class="mx-4 rounded-full object-contain" :src="logoImageUrl"
+            alt="logo" /></router-link>
       </div>
       <div>
         <div>前端專案模板 | 說說而已科技有限公司</div>
@@ -120,11 +121,11 @@ window.addEventListener("load", () => {
       <!--選單內容 開始-->
       <div v-for="(Group, Index) in DataJson.menuList" :key="'Group_' + Group.Index">
         <div class="AdminMenuGroupTitle" v-text="Group.groupName"></div>
-        <a v-for="Item in Group.items" :href="`${Item.path}/Setting`"
+        <router-link v-for="Item in Group.items" :to="`${Item.path}/Setting`"
           :class="{ MenuActive: currentRouteName == Item.name }" class="AdminMenuItem">
           <font-awesome-icon :icon="Item.icon" />
           <span v-text="Item.name"></span>
-        </a>
+        </router-link>
         <hr v-if="Index + 1 < MenuList.length" />
       </div>
       <!--選單內容 結束-->

@@ -19,6 +19,7 @@ const OptionsList = ref([
     { Value: '阿美', Path: '/competition/award' },
     { Value: '部落大學電子書', Path: '/competition/award' },
     { Value: '檔案下載', Path: 'https://drive.google.com/drive/folders/1yfgnTe6x0Ul4pMyvVxhj7lVwITUCYTtd?usp=drive_link' },
+    { Value: '典藏文物', Path: 'https://docs.google.com/spreadsheets/d/13ccpNo4Jnsgkq2IpwbZQ-4xReCI0e8RZVMs643HT3P0/edit?usp=sharing' },
 ])
 </script>
 <template>

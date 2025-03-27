@@ -189,21 +189,22 @@ onMounted(() => {
         class="sliderMoment w-4/5 h-auto border-dashed border-4 mx-auto my-4 rounded-xl text-center items-start justify-start flex flex-wrap">
         <div class="flex items-end justify-between w-full">
           <Moments :indexNum="4"></Moments>
-          <a href="/announce/moments" class="bg-defaultButton rounded p-4 m-4 cursor-pointer">MORE</a>
+          <router-link to="/announce/moments" class="bg-defaultButton rounded p-4 m-4 cursor-pointer">MORE</router-link>
         </div>
       </div>
       <div
         class="sliderHeight w-4/5 h-auto border-dashed border-4 mx-auto my-4 rounded-xl text-center items-start justify-start flex flex-wrap">
         <div class="flex items-end justify-between w-full">
           <Highlights :indexNum="4"></Highlights>
-          <a href="/announce/highlights" class="bg-defaultButton0 rounded p-4 m-4 cursor-pointer">MORE</a>
+          <router-link to="/announce/highlights"
+            class="bg-defaultButton0 rounded p-4 m-4 cursor-pointer">MORE</router-link>
         </div>
       </div>
       <div
         class="sliderVideo w-4/5 h-auto border-dashed border-4 mx-auto my-4 rounded-xl text-center items-start justify-start flex flex-wrap">
         <div class="flex flex-wrap items-end justify-between w-full p-4">
           <Activity></Activity>
-          <a href="/activity" class="bg-defaultButton rounded p-4 m-4 cursor-pointer">MORE</a>
+          <router-link to="/activity" class="bg-defaultButton rounded p-4 m-4 cursor-pointer">MORE</router-link>
         </div>
       </div>
     </div>

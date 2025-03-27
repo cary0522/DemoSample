@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "demo": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@ckeditor/ckeditor5-image": "^44.3.0",
