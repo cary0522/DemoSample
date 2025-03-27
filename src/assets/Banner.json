@@ -2,41 +2,41 @@
     {
         "id": 1,
         "title": "Banner 1",
-        "image": "/images/Banner/banner01.jpg"
+        "image": "././public/images/Banner/banner01.jpg"
     },
     {
         "id": 2,
         "title": "Banner 2",
-        "image": "/images/Banner/banner02.jpg"
+        "image": "././public/images/Banner/banner02.jpg"
     },
     {
         "id": 3,
         "title": "Banner 3",
-        "image": "/images/Banner/banner03.jpg"
+        "image": "././public/images/Banner/banner03.jpg"
     },
     {
         "id": 4,
         "title": "Banner 4",
-        "image": "/images/Banner/banner04.jpg"
+        "image": "././public/images/Banner/banner04.jpg"
     },
     {
         "id": 5,
         "title": "Banner 5",
-        "image": "/images/Banner/banner05.jpg"
+        "image": "././public/images/Banner/banner05.jpg"
     },
     {
         "id": 6,
         "title": "Banner 6",
-        "image": "/images/Banner/banner06.jpg"
+        "image": "././public/images/Banner/banner06.jpg"
     },
     {
         "id": 7,
         "title": "Banner 7",
-        "image": "/images/Banner/banner07.jpg"
+        "image": "././public/images/Banner/banner07.jpg"
     },
     {
         "id": 8,
         "title": "Banner 8",
-        "image": "/images/Banner/banner08.jpg"
+        "image": "././public/images/Banner/banner08.jpg"
     }
 ]
