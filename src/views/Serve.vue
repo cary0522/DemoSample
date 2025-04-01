@@ -54,7 +54,7 @@ function clickResult() {
 
 <template>
   <UserPage>
-    <div class="flex">
+    <div class="flex" id="serve">
       <LeftOptions :OptionsList="OptionsList" class="w-1/3" />
       <div class="w-full flex flex-wrap">
         <Search class="w-full" />
@@ -87,4 +87,11 @@ function clickResult() {
 .v-leave-to {
   opacity: 0;
 }
+
+#serve table,
+#serve th,
+#serve td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
 </style>
