@@ -13,9 +13,9 @@ import Breadcrumb from '@/components/BaseComponents/Breadcrumb.vue'
 const router = useRouter()
 
 const OptionsList = ref([
-    { Value: '111學年度策盟成果', Path: '/celebration/opening' },
-    { Value: '110學年度策盟成果', Path: '/celebration/awardProcess' },
-    { Value: '復興區策盟成果', Path: '/celebration/openingLIVE' },
+    { Value: '111學年度策盟成果', Path: 'https://sites.google.com/mail.hfps.tyc.edu.tw/111irc?usp=sharing' },
+    { Value: '110學年度策盟成果', Path: 'https://sites.google.com/mail.hfps.tyc.edu.tw/110irc?usp=sharing' },
+    { Value: '復興區策盟成果', Path: 'https://fuxing.sa.tyc.edu.tw/' },
     { Value: '成果填報', Path: '/celebration/awardLIVE' },
 ])
 </script>

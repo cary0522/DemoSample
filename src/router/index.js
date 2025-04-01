@@ -148,24 +148,6 @@ const router = createRouter({
       meta: { title: "" },
     },
     {
-      path: "/celebration/opening",
-      name: "opening",
-      component: Celebration,
-      meta: { title: "111學年度策盟成果" },
-    },
-    {
-      path: "/celebration/awardProcess",
-      name: "awardProcess",
-      component: Celebration,
-      meta: { title: "110學年度策盟成果" },
-    },
-    {
-      path: "/celebration/openingLIVE",
-      name: "openingLIVE",
-      component: Celebration,
-      meta: { title: "復興區策盟成果" },
-    },
-    {
       path: "/celebration/awardLIVE",
       name: "awardLIVE",
       component: Celebration,

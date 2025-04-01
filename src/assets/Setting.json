@@ -26,7 +26,7 @@
           "englishName": "Central Mission",
           "icon": [
             "fas",
-            "notes-medical"
+            "list-check"
           ],
           "path": "/info/organization"
         },
@@ -35,7 +35,7 @@
           "englishName": "Logo",
           "icon": [
             "fas",
-            "share-from-square"
+            "users"
           ],
           "path": "/info/logo"
         },
@@ -44,7 +44,7 @@
           "englishName": "Logo",
           "icon": [
             "fas",
-            "share-from-square"
+            "comments"
           ],
           "path": "/activity"
         }
@@ -65,7 +65,7 @@
           "englishName": "Celebration Opening",
           "icon": [
             "fas",
-            "arrow-up-right-from-square"
+            "newspaper"
           ],
           "path": "/announce/latestNews"
         },
@@ -74,7 +74,7 @@
           "englishName": "The Council of Indigenous Peoples",
           "icon": [
             "fas",
-            "arrow-up-right-from-square"
+            "newspaper"
           ],
           "path": "/announce/moments"
         },
@@ -83,7 +83,7 @@
           "englishName": "Department of Indigenous Aflinks",
           "icon": [
             "fas",
-            "arrow-up-right-from-square"
+            "newspaper"
           ],
           "path": "/announce/highlights"
         },
@@ -92,7 +92,7 @@
           "englishName": "Taiwan Indigenous TV",
           "icon": [
             "fas",
-            "arrow-up-right-from-square"
+            "newspaper"
           ],
           "path": "/announce/video"
         }
@@ -112,7 +112,7 @@
           "englishName": "Schedule",
           "icon": [
             "fas",
-            "file-lines"
+            "book"
           ],
           "path": "/competition/schedule"
         },
@@ -121,7 +121,7 @@
           "englishName": "Files",
           "icon": [
             "fas",
-            "people-line"
+            "book"
           ],
           "path": "/competition/file"
         },
@@ -130,7 +130,7 @@
           "englishName": "Excellent Instructor",
           "icon": [
             "fas",
-            "people-roof"
+            "book"
           ],
           "path": "/competition/excellentInstructor"
         },
@@ -139,7 +139,7 @@
           "englishName": "Award",
           "icon": [
             "fas",
-            "chalkboard-user"
+            "book"
           ],
           "path": "/competition/award"
         },
@@ -148,7 +148,7 @@
           "englishName": "Award",
           "icon": [
             "fas",
-            "chalkboard-user"
+            "book"
           ],
           "path": "/competition/award"
         },
@@ -157,7 +157,7 @@
           "englishName": "Award",
           "icon": [
             "fas",
-            "chalkboard-user"
+            "swatchbook"
           ],
           "path": "https://ebook.cdway.com.tw/tyc/index.asp"
         },
@@ -166,7 +166,7 @@
           "englishName": "Award",
           "icon": [
             "fas",
-            "chalkboard-user"
+            "file"
           ],
           "path": "https://drive.google.com/drive/folders/1yfgnTe6x0Ul4pMyvVxhj7lVwITUCYTtd?usp=drive_link"
         },
@@ -175,7 +175,7 @@
           "englishName": "Award",
           "icon": [
             "fas",
-            "chalkboard-user"
+            "file-lines"
           ],
           "path": "https://docs.google.com/spreadsheets/d/13ccpNo4Jnsgkq2IpwbZQ-4xReCI0e8RZVMs643HT3P0/edit?usp=sharing"
         }
@@ -187,7 +187,7 @@
       "englishName": "Achievements",
       "icon": [
         "fas",
-        "link"
+        "trophy"
       ],
       "items": [
         {
@@ -195,7 +195,7 @@
           "englishName": "Announce",
           "icon": [
             "fas",
-            "arrow-up-right-from-square"
+            "photo-film"
           ],
           "path": "https://drive.google.com/drive/folders/1NCwZjABuLDNoV599w4rxBv9uV7xhVvw2?usp=drive_link"
         },
@@ -204,34 +204,34 @@
           "englishName": "Celebration Opening",
           "icon": [
             "fas",
-            "arrow-up-right-from-square"
+            "link"
           ],
-          "path": "/celebration/opening"
+          "path": "https://sites.google.com/mail.hfps.tyc.edu.tw/111irc?usp=sharing"
         },
         {
           "name": "110學年度策盟成果",
           "englishName": "AwardProcess",
           "icon": [
             "fas",
-            "paperclip"
+            "link"
           ],
-          "path": "/celebration/awardProcess"
+          "path": "https://sites.google.com/mail.hfps.tyc.edu.tw/110irc?usp=sharing"
         },
         {
           "name": "復興區策盟成果",
           "englishName": "Opening LIVE",
           "icon": [
             "fas",
-            "book"
+            "link"
           ],
-          "path": "/celebration/openingLIVE"
+          "path": "https://fuxing.sa.tyc.edu.tw/"
         },
         {
           "name": "成果填報",
           "englishName": "Award LIVE",
           "icon": [
             "fas",
-            "medal"
+            "star"
           ],
           "path": "/celebration/awardLIVE"
         }
@@ -248,10 +248,10 @@
       "items": [
         {
           "name": "影音紀錄",
-          "englishName": "Contact Us",
+          "englishName": "Video",
           "icon": [
             "fas",
-            "clipboard"
+            "video"
           ],
           "path": "/serve/contact"
         },
@@ -260,7 +260,7 @@
           "englishName": "Accommodation Information",
           "icon": [
             "fas",
-            "clipboard"
+            "language"
           ],
           "path": "/serve/accommodation"
         },
@@ -269,7 +269,7 @@
           "englishName": "Gift Information",
           "icon": [
             "fas",
-            "clipboard"
+            "globe"
           ],
           "path": "/serve/gift"
         },
@@ -278,7 +278,7 @@
           "englishName": "Traffic Information",
           "icon": [
             "fas",
-            "clipboard"
+            "brain"
           ],
           "path": "/serve/traffic"
         },
@@ -287,7 +287,7 @@
           "englishName": "Parking Information",
           "icon": [
             "fas",
-            "clipboard"
+            "person-chalkboard"
           ],
           "path": "/serve/parking"
         },
@@ -296,7 +296,7 @@
           "englishName": "Traffic Floor Plan",
           "icon": [
             "fas",
-            "clipboard"
+            "chalkboard-user"
           ],
           "path": "/serve/trafficFloorPlan"
         },
@@ -305,7 +305,7 @@
           "englishName": "Shuttle Bus",
           "icon": [
             "fas",
-            "clipboard"
+            "people-roof"
           ],
           "path": "/serve/shuttle"
         },
@@ -314,7 +314,7 @@
           "englishName": "Shuttle Bus Map",
           "icon": [
             "fas",
-            "clipboard"
+            "recycle"
           ],
           "path": "/serve/shuttleMap"
         }
@@ -334,7 +334,7 @@
           "englishName": "Contact Us",
           "icon": [
             "fas",
-            "clipboard"
+            "link"
           ],
           "path": "/link/method"
         },
@@ -343,7 +343,7 @@
           "englishName": "Accommodation Information",
           "icon": [
             "fas",
-            "clipboard"
+            "link"
           ],
           "path": "/link/stall"
         },
@@ -352,7 +352,7 @@
           "englishName": "Gift Information",
           "icon": [
             "fas",
-            "clipboard"
+            "link"
           ],
           "path": "/link/themePavilion"
         },
@@ -361,7 +361,7 @@
           "englishName": "Foundation",
           "icon": [
             "fas",
-            "clipboard"
+            "link"
           ],
           "path": "/link/foundation"
         },
@@ -370,7 +370,7 @@
           "englishName": "Center",
           "icon": [
             "fas",
-            "clipboard"
+            "link"
           ],
           "path": "/link/center"
         }

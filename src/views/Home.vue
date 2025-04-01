@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, reactive, ref, watch } from "vue";
+import { nextTick, onMounted, ref, watchEffect } from "vue";
 import UserPage from "/src/components/MasterPageUser.vue";
 import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
 import Banner from "@/components/BaseComponents/Banner.vue";
@@ -12,9 +12,9 @@ import Highlights from "@/components/AnnouncePage/Highlights.vue";
 import Video from "@/components/AnnouncePage/Video.vue";
 import ApiHelper from "@/helpers/ApiHelper";
 import Activity from '@/views/Activity.vue'
+import Swal from "sweetalert2";
 import LatestNewsJson from '@/assets/LatestNews.json'
 import EBooks from '@/assets/EBooks.json'
-console.log(EBooks)
 
 const type = import.meta.env.VITE_APP_TYPE;
 
@@ -85,6 +85,9 @@ const TableDate = ref([]);
 function GetPageData() {
   if (type == 'locale') {
     TableDate.value = LatestNewsJson.DataList;
+    nextTick(() => {
+      gsapFunction();
+    });
   } else {
     ApiHelper.Axios(
       "api/LatestNews/GetPageData",
@@ -101,69 +104,40 @@ function GetPageData() {
     );
   }
 }
-// 取得宣傳影片資料
-const VideoData = ref([]);
-function GetVideoData() {
-  ApiHelper.Axios(
-    "api/announce/viedo",
-    "GET",
-    null,
-    (res) => {
-      if (res.status == 200) {
-        VideoData.value = res.data;
-      }
-    },
-    (err) => {
-      ApiHelper.ProcessErrMsg(err);
-    }
-  );
-}
 
 gsap.registerPlugin(ScrollTrigger);
 const TimeLine = gsap.timeline();
 function gsapFunction() {
-  TimeLine.to("#announceTable", {
-    scrollTrigger: {
-      trigger: "#BannerImg",
-      start: `bottom ${window.innerWidth > 768 ? "10%" : "top"}`,
-      end: "bottom 10%",
-      scrub: 2,
+  TimeLine.fromTo(
+    ".sliderHeight",
+    {
+      scale: '.8'
     },
-    y: window.innerWidth > 768 ? "-20vh" : "-10vh",
-  })
-    // .set("#sliderArea", {
-    //   y: window.innerWidth > 768 ? "-20vh" : "-10vh",
-    // })
-    .fromTo(
-      ".sliderMoment",
-      {
-        scale: '.8'
+    {
+      scrollTrigger: {
+        trigger: "#announceTable",
+        start: "center center",
+        end: "bottom 40%",
+        scrub: 2,
       },
-      {
-        scrollTrigger: {
-          trigger: "#announceTable",
-          start: "center center",
-          end: "bottom 40%",
-          scrub: 2,
-        },
-        scale: '1'
-      }
-    )
-    .fromTo(
-      ".sliderHeight",
-      {
-        scale: '.8'
-      },
-      {
-        scrollTrigger: {
-          trigger: ".sliderMoment",
-          start: "bottom center",
-          end: "bottom 40%",
-          scrub: 2,
-        },
-        scale: '1'
-      }
-    )
+      scale: '1'
+    }
+  )
+    // .fromTo(
+    //   ".sliderHeight",
+    //   {
+    //     scale: '.8'
+    //   },
+    //   {
+    //     scrollTrigger: {
+    //       trigger: ".sliderMoment",
+    //       start: "bottom center",
+    //       end: "bottom 40%",
+    //       scrub: 2,
+    //     },
+    //     scale: '1'
+    //   }
+    // )
     .fromTo(
       ".sliderVideo",
       {
@@ -183,25 +157,40 @@ function gsapFunction() {
 
 onMounted(() => {
   GetPageData();
-  GetVideoData();
-  gsapFunction();
+
+  if (window.navigator.userAgent.toLocaleLowerCase().indexOf("line") >= 0) {
+    Swal.fire(
+      {
+        title: "不支援此瀏覽器",
+        html: `<span class="text-red-700">不支援此瀏覽器<br>請按下確認鍵使用預設瀏覽器開啟</span><br>(建議使用Chrome、Firefox、Edge、Safari瀏覽器開啟本網站)`,
+        icon: "warning",
+        confirmButtonText: "確定",
+      }
+    ).then((res) => {
+      if (res.isConfirmed) {
+        window.location.href = "https://expogame.sssh.tyc.edu.tw/?openExternalBrowser=1";
+      }
+    });
+  }
+
 });
 </script>
 <template>
   <UserPage>
-    <Banner></Banner>
-    <div id="announceTable" class="w-4/5 mx-auto">
+    <Banner id="BannerImg"></Banner>
+    <div id="announceTable" class="w-4/5 mx-auto" v-if="TableDate.length > 0">
       <Table :-table-header="TableHeader" v-model:TableData="TableDate"></Table>
     </div>
     <div class="w-full justify-start mb-16" id="sliderArea">
-      <div
+      <!-- <div
         class="sliderMoment w-4/5 min-h-96 h-auto border-dashed border-4 mx-auto my-4 rounded-xl text-center items-start justify-start flex flex-wrap">
-        <div class="flex items-end justify-between w-full">
+        <div class="flex flex-wrap items-end justify-between w-full">
           <Breadcrumb :-breadcrumb-list="['原住民族相關訊息']" class="mx-4 w-full"></Breadcrumb>
-          <router-link to="/announce/moments"
+
+          <router-link to="/announce"
             class="bg-defaultButton rounded p-4 m-4 cursor-pointer hover:scale-105">MORE</router-link>
         </div>
-      </div>
+      </div> -->
       <div
         class="sliderHeight w-4/5 min-h-96 h-auto border-dashed border-4 mx-auto my-4 rounded-xl text-center items-start justify-start flex flex-wrap">
         <Breadcrumb :-breadcrumb-list="['教材資源']" class="mx-4 w-full"></Breadcrumb>

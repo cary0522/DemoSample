@@ -7,10 +7,10 @@ const { t, locale } = useI18n();
 const props = defineProps(["MenuList"]);
 </script>
 <template>
-  <div id="footer"
-    class="hidden lg:flex flex-wrap text-center bg-defaultBg min-h-[200px] h-auto sticky bottom-0 mx-0 pb-4">
-    <div class="flex flex-nowrap w-full 2xl:w-[1512px] justify-start sm:ms-4 2xl:mx-auto items-start">
-      <div v-for="item in props.MenuList" class="my-2 mx-auto w-auto max-w-[200px] flex flex-wrap text-defaultColor">
+  <div id="footer" class="flex flex-wrap text-center bg-defaultBg min-h-[200px] h-auto sticky bottom-0 mx-0 pb-4">
+    <div class="flex flex-wrap lg:flex-nowrap w-full 2xl:w-[1512px] justify-start sm:ms-4 2xl:mx-auto items-start">
+      <div v-for="item in props.MenuList"
+        class="my-2 mx-auto w-full lg:w-auto max-w-[200px] flex flex-wrap text-defaultColor">
         <p
           class="text-base 2xl:text-xl font-black text-center w-full whitespace-pre border-b-4 border-black pb-2 mx-2 cursor-pointer hover:text-[#F28729]">
           <Link :path="item.path || ''">{{ t(`menuList.${item.groupName}`) }}</Link>

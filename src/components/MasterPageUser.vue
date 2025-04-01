@@ -2,7 +2,6 @@
 import "../assets/style/MasterPageUser.css";
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
-// import "animate.css";
 import Nav from "./BaseComponents/Nav.vue";
 import Footer from "./BaseComponents/Footer.vue";
 import ToTheTop from "./BaseComponents/ToTheTop.vue";

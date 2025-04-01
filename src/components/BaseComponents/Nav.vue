@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
+import "animate.css"
 import logoImageUrl from "/images/logo.jpg";
 import Link from "@/components/BaseComponents/Link.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
@@ -17,6 +18,7 @@ const model = defineModel("SettingJson");
 const toggleMenuVisibility = () => {
   isMenuVisible.value = !isMenuVisible.value;
 };
+const LastScrollYData = ref(0);
 
 //選單控制
 let isMenuVisible = ref(false);
@@ -24,6 +26,18 @@ let isMenuVisible = ref(false);
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 768) {
     isMenuVisible.value = true;
+    window.addEventListener("scroll", () => {
+      const header = document.getElementsByTagName("header")[0];
+      if (window.scrollY > LastScrollYData.value && window.scrollY > 150) {
+        header.classList.add("animate__animated", "animate__fadeOutUp");
+        header.classList.remove("animate__fadeInDown");
+        LastScrollYData.value = window.scrollY;
+      } else if (window.scrollY < LastScrollYData.value) {
+        header.classList.remove("animate__fadeOutUp");
+        header.classList.add("animate__fadeInDown");
+        LastScrollYData.value = window.scrollY;
+      }
+    });
   } else {
     isMenuVisible.value = false;
   }
@@ -32,6 +46,18 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", () => {
   if (window.innerWidth >= 768) {
     isMenuVisible.value = true;
+    window.addEventListener("scroll", () => {
+      const header = document.getElementsByTagName("header")[0];
+      if (window.scrollY > LastScrollYData.value && window.scrollY > 150) {
+        header.classList.add("animate__animated", "animate__fadeOutUp");
+        header.classList.remove("animate__fadeInDown");
+        LastScrollYData.value = window.scrollY;
+      } else if (window.scrollY < LastScrollYData.value) {
+        header.classList.remove("animate__fadeOutUp");
+        header.classList.add("animate__fadeInDown");
+        LastScrollYData.value = window.scrollY;
+      }
+    });
   } else {
     isMenuVisible.value = false;
   }
@@ -40,6 +66,18 @@ window.addEventListener("load", () => {
 onMounted(() => {
   if (window.innerWidth >= 768) {
     isMenuVisible.value = true;
+    window.addEventListener("scroll", () => {
+      const header = document.getElementsByTagName("header")[0];
+      if (window.scrollY > LastScrollYData.value && window.scrollY > 150) {
+        header.classList.add("animate__animated", "animate__fadeOutUp");
+        header.classList.remove("animate__fadeInDown");
+        LastScrollYData.value = window.scrollY;
+      } else if (window.scrollY < LastScrollYData.value) {
+        header.classList.remove("animate__fadeOutUp");
+        header.classList.add("animate__fadeInDown");
+        LastScrollYData.value = window.scrollY;
+      }
+    });
   } else {
     isMenuVisible.value = false;
   }
@@ -57,7 +95,7 @@ onMounted(() => {
           <img class="mx-2 h-14 object-contain rounded-full animate__animated animate__rollIn animate__fast"
             :src="logoImageUrl" alt="logo" />
           <div class="text-start mx-2 w-auto animate__animated animate__fadeInLeft animate__fast">
-            <p class="text-xl leading-0">
+            <p class=" text-sm 2xl:text-xl leading-0">
               {{ t(`WebTitle`) }}</p>
             <p class="font-normal leading-0 tracking-tighter text-xs w-full">
               {{ t(`SideTitle`) }}
@@ -67,7 +105,7 @@ onMounted(() => {
       </div>
       <!--電腦選單內容 開始-->
       <div v-show="isMenuVisible"
-        class="hidden md:flex flex-row flex-wrap md:justify-start 2xl:justify-end text-defaultColor text-xl md:w-9/12 2xl:w-8/12 text-center h-100% mx-4 animate__animated animate__fadeInLeft animate__fast">
+        class="hidden md:flex flex-row flex-wrap md:justify-start 2xl:justify-end text-defaultColor text-base 2xl:text-lg md:w-9/12 2xl:w-8/12 text-center h-100% mx-4 animate__animated animate__fadeInLeft animate__fast">
         <div v-for="(Group, Index) in model.menuList" :key="'Group_' + Index" @mouseover="Group.ShowItem = true"
           @mouseleave="Group.ShowItem = false" class="transition-all mx-1 relative py-4">
           <div :class="{ 'hover:bg-gray-300': Group.items.length == 0 }"
