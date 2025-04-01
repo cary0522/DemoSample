@@ -1,0 +1,212 @@
+[
+    {
+        "type": "原教中心",
+        "id": 1,
+        "name": "新北市原住民教育資源中心",
+        "path": "https://elem.ntpc.edu.tw/p/426-1005-7.php?Lang=zh-tw",
+        "image": "./images/LinkLogos/1.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 2,
+        "name": "高雄市原住民族教育資源中心",
+        "path": "https://affairs.kh.edu.tw/2134",
+        "image": "./images/LinkLogos/2.jpg"
+    },
+    {
+        "type": "原教中心",
+        "id": 3,
+        "name": "台北市原住民教育資源中心",
+        "path": "https://tpiercenter.tp.edu.tw/",
+        "image": "./images/LinkLogos/3.svg"
+    },
+    {
+        "type": "原教中心",
+        "id": 4,
+        "name": "台中市原住民教育資源中心",
+        "path": "https://tcierc.tc.edu.tw/",
+        "image": "./images/LinkLogos/4.jpg"
+    },
+    {
+        "type": "原教中心",
+        "id": 5,
+        "name": "南投縣原住民教育資源中心",
+        "path": "https://r202.ntct.edu.tw/index.php",
+        "image": "./images/LinkLogos/5.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 6,
+        "name": "彰化縣原住民教育資源中心",
+        "path": "https://sites.google.com/chc.edu.tw/ciperc/photo?authuser=0",
+        "image": "./images/LinkLogos/6.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 7,
+        "name": "台東縣原住民教育資源中心",
+        "path": "https://sites.google.com/view/ttierc-home/%E9%A6%96%E9%A0%81?authuser=0",
+        "image": "./images/LinkLogos/7.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 8,
+        "name": "屏東縣原住民教育資源中心",
+        "path": "https://ptierc.com.tw/",
+        "image": "./images/LinkLogos/8.jpg"
+    },
+    {
+        "type": "原教中心",
+        "id": 9,
+        "name": "花蓮縣原住民教育資源中心",
+        "path": "https://inde.hlc.edu.tw/",
+        "image": "./images/LinkLogos/9.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 10,
+        "name": "苗栗縣原住民教育資源中心",
+        "path": "https://mlierc.mlc.edu.tw/Public/index",
+        "image": "./images/LinkLogos/10.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 11,
+        "name": "基隆市原住民教育資源中心",
+        "path": "https://indigenouscenter.kl.edu.tw/",
+        "image": "./images/LinkLogos/11.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 12,
+        "name": "雲林縣原住民教育資源中心",
+        "path": "https://www.facebook.com/profile.php?id=100076152311453&amp%3Bsk=about/",
+        "image": "./images/LinkLogos/12.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 13,
+        "name": "嘉義縣原住民教育資源中心",
+        "path": "https://iercicc.cyc.edu.tw/",
+        "image": "./images/LinkLogos/13.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 14,
+        "name": "嘉義市原住民教育資源中心",
+        "path": "https://www.facebook.com/ChiayiIERC/",
+        "image": "./images/LinkLogos/14.jpg"
+    },
+    {
+        "type": "原教中心",
+        "id": 15,
+        "name": "台南市原住民教育資源中心",
+        "path": "https://ierct.tn.edu.tw/",
+        "image": "./images/LinkLogos/15.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 16,
+        "name": "宜蘭縣原住民教育資源中心",
+        "path": "https://www.iedu.ilc.edu.tw/",
+        "image": "./images/LinkLogos/16.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 17,
+        "name": "澎湖縣原住民教育資源中心",
+        "path": "https://www.facebook.com/profile.php?id=100089925925834",
+        "image": "./images/LinkLogos/17.png"
+    },
+    {
+        "type": "原教中心",
+        "id": 18,
+        "name": "新竹縣原住民教育資源中心",
+        "path": "https://www.facebook.com/p/%E6%96%B0%E7%AB%B9%E7%B8%A3%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E6%95%99%E8%82%B2%E8%B3%87%E6%BA%90%E4%B8%AD%E5%BF%83-100057074605317/?locale=zh_TW",
+        "image": "./images/LinkLogos/18.png"
+    },
+    {
+        "type": "政府機關",
+        "id": 19,
+        "name": "原住民族委員會全球資訊網",
+        "path": "https://www.cip.gov.tw/zh-tw/index.html",
+        "image": "./images/LinkLogos/19.png"
+    },
+    {
+        "type": "政府機關",
+        "id": 20,
+        "name": "桃園市政府原住民族行政局",
+        "path": "https://ipb.tycg.gov.tw/",
+        "image": "./images/LinkLogos/20.png"
+    },
+    {
+        "type": "政府機關",
+        "id": 21,
+        "name": "教育部原力網",
+        "path": "https://indigenous.moe.gov.tw/",
+        "image": "./images/LinkLogos/21.png"
+    },
+    {
+        "type": "教育學習",
+        "id": 22,
+        "name": "原住民族族語線上詞典",
+        "path": "https://e-dictionary.ilrdf.org.tw/",
+        "image": "./images/LinkLogos/22.png"
+    },
+    {
+        "type": "教育學習",
+        "id": 23,
+        "name": "台灣原住民族數位典藏知識入口網",
+        "path": "https://digitalarchives.tacp.gov.tw/",
+        "image": "./images/LinkLogos/23.png"
+    },
+    {
+        "type": "教育學習",
+        "id": 24,
+        "name": "原住民族教育資訊網",
+        "path": "https://ieiw.k12ea.gov.tw/#1",
+        "image": "./images/LinkLogos/24.png"
+    },
+    {
+        "type": "教育學習",
+        "id": 25,
+        "name": "原住民族語言研究發展基金會",
+        "path": "https://web.lokahsu.org.tw/",
+        "image": "./images/LinkLogos/25.png"
+    },
+    {
+        "type": "研究單位",
+        "id": 26,
+        "name": "國家教育研究院",
+        "path": "https://www.naer.edu.tw/PageFront",
+        "image": "./images/LinkLogos/26.png"
+    },
+    {
+        "type": "研究單位",
+        "id": 27,
+        "name": "中央研究院數位典藏",
+        "path": "https://sinica.digitalarchives.tw/",
+        "image": "./images/LinkLogos/27.png"
+    },
+    {
+        "type": "研究單位",
+        "id": 28,
+        "name": "國立政治大學原住民族研究中心",
+        "path": "https://web.alcd.center/",
+        "image": "./images/LinkLogos/28.jpg"
+    },
+    {
+        "type": "財團法人",
+        "id": 29,
+        "name": "原住民族語言研究發展中心",
+        "path": "http://ilrdc.tw/about/",
+        "image": "./images/LinkLogos/29.jpg"
+    },
+    {
+        "type": "財團法人",
+        "id": 30,
+        "name": "原住民族文化事業基金會",
+        "path": "http://www.ipcf.org.tw/",
+        "image": "./images/LinkLogos/30.png"
+    }
+]

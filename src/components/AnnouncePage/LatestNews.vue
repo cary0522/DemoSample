@@ -65,7 +65,6 @@ onMounted(() => {
 });
 </script>
 <template>
-  <Breadcrumb :BreadcrumbList="['活動相簿', '最新消息']" class="mx-4"></Breadcrumb>
   <Table :-table-header="TableHeader" v-model:TableData="TableDate" :-get-page-data="GetPageData"
     :-detail-function="GetDetail" :Pointer="true" class="mx-4"></Table>
   <TableContent v-if="DetailShow"></TableContent>

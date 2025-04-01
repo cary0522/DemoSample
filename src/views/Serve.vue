@@ -7,6 +7,7 @@ import Breadcrumb from "@/components/BaseComponents/Breadcrumb.vue";
 import Search from "@/components/BaseComponents/Search.vue";
 import Button from "@/components/BaseComponents/Button.vue";
 import ApiHelper from "@/helpers/ApiHelper";
+import PlansJson from "@/assets/Plans.json";
 
 import Contact from "@/components/ServePage/Contact.vue";
 import Accommodation from "@/components/ServePage/Accommodation.vue";
@@ -37,8 +38,16 @@ const OptionsList = ref([
   { Value: "教材編輯", Path: "/serve/shuttleMap" },
 ]);
 
-const ExplainData = ref()
-const ResultData = ref()
+const ShowContent = ref(true);
+const ShowResult = ref(false);
+function clickContent() {
+  ShowContent.value = true;
+  ShowResult.value = false;
+}
+function clickResult() {
+  ShowContent.value = false;
+  ShowResult.value = true;
+}
 
 
 </script>
@@ -51,21 +60,18 @@ const ResultData = ref()
         <Search class="w-full" />
         <Breadcrumb :BreadcrumbList="['各子計畫', router.currentRoute.value.meta.title]" class="mx-4 w-full" />
         <div class="flex justify-start w-2/3 mx-4">
-          <Button :BtnText="'計畫說明'"></Button>
-          <Button :BtnText="'計畫成果'"></Button>
+          <Button :BtnText="'計畫說明'" :-click-function="clickContent"
+            :class="ShowContent ? 'scale-125 mx-2' : ''"></Button>
+          <Button :BtnText="'計畫成果'" :-click-function="clickResult" :class="ShowResult ? 'scale-125 mx-2' : ''"></Button>
         </div>
-        <div class="p-8">
-
-        </div>
-
-        <Contact v-if="router.currentRoute.value.path === '/serve/contact'" />
-        <Accommodation v-if="router.currentRoute.value.path === '/serve/accommodation'" />
-        <Gift v-if="router.currentRoute.value.path === '/serve/gift'" />
-        <Traffic v-if="router.currentRoute.value.path === '/serve/traffic'" />
-        <Parking v-if="router.currentRoute.value.path === '/serve/parking'" />
-        <TrafficFloorPlan v-if="router.currentRoute.value.path === '/serve/trafficFloorPlan'" />
-        <Shuttle v-if="router.currentRoute.value.path === '/serve/shuttle'" />
-        <ShuttleMap v-if="router.currentRoute.value.path === '/serve/shuttleMap'" />
+        <template v-for="plan in PlansJson">
+          <div class="p-8 w-full" v-if="plan.name == router.currentRoute.value.meta.title">
+            <div v-if="ShowContent" v-html="plan.content" class="w-full">
+            </div>
+            <div v-if="ShowResult" v-html="plan.result" class="w-full min-h-[150px]">
+            </div>
+          </div>
+        </template>
       </div>
     </div>
   </UserPage>

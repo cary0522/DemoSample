@@ -1,10 +1,8 @@
 <script setup>
-import Breadcrumb from "@/components/BaseComponents/Breadcrumb.vue";
 import AreaTitle from "@/components/BaseComponents/AreaTitle.vue";
 </script>
 <template>
     <div>
-        <Breadcrumb :BreadcrumbList="['認識我們', '中心簡介']"></Breadcrumb>
         <h3 class="font-bold text-lg py-2">桃園市原住民族教育資源中心歷年的發展與轉型</h3>
         <div>
             <ul>

@@ -27,7 +27,6 @@ const router = useRouter()
 // ])
 </script>
 <template>
-    <Breadcrumb :BreadcrumbList="['聯絡我們']" class="m-8 w-full"></Breadcrumb>
     <div class="flex justify-around">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7236.569589358758!2d121.2946249!3d24.9223662!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346818f623ac48cb%3A0x88a1795d71fd27af!2z5qGD5ZyS5biC5aSn5rqq5Y2A5YOR5oSb5ZyL5rCR5bCP5a24!5e0!3m2!1szh-TW!2stw!4v1742968422699!5m2!1szh-TW!2stw"

@@ -3,27 +3,20 @@ import ApiHelper from "@/helpers/ApiHelper";
 import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import SettingJson from "@/assets/Setting.json";
-const DataJson = ref(SettingJson);
+
 import BannerJson from "@/assets/Banner.json";
 
 const Type = import.meta.env.VITE_APP_TYPE;
-console.log(Type);
-
 
 import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n();
+const { t } = useI18n();
 
-
-const BannerData = ref([]);
-const Title = ref("");
 // 取得輪播圖資料
+const BannerData = ref([]);
 function GetPageData() {
   if (Type == 'locale') {
-    console.log('true')
     BannerData.value = BannerJson;
   } else {
-    console.log('false')
     ApiHelper.Axios(
       "api/Home/BannerData",
       "GET",
@@ -40,6 +33,7 @@ function GetPageData() {
   }
 }
 
+// 設定動畫
 gsap.registerPlugin(ScrollTrigger);
 onMounted(() => {
   GetPageData();
@@ -79,7 +73,6 @@ onMounted(() => {
         </v-carousel-item>
       </template>
     </v-carousel>
-    <!-- <img src="/images/ScienceBanner.webp" alt="" class="w-full 2xl:w-4/5 mx-auto opacity-60" id="BannerImg" /> -->
     <div
       class="w-full text-center font-black text-7xl tracking-widest text-transparent hidden md:block absolute bottom-0"
       id="pageTitle">
@@ -89,6 +82,6 @@ onMounted(() => {
 </template>
 <style>
 #pageTitle {
-  -webkit-text-stroke: 2px rgb(108, 105, 105);
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
 }
 </style>

@@ -7,6 +7,10 @@ import HandPointer from "./HandPointer.vue";
 import Button from "./Button.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { DotLottieVue } from "@lottiefiles/dotlottie-vue";
+
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
+
 // import { FwbToggle } from "flowbite-vue";
 // 用於所有詳細表格渲染，以下載檔案函式、保存路由、上傳檔案路由判別資料
 // 接收表格所需資料
@@ -26,6 +30,7 @@ const props = defineProps([
   // 取得頁面資料函式
   "GetPageData",
 ]);
+console.log(props.DetailHeader)
 
 // 雙向綁定控制視窗開關
 const ShowValue = defineModel("ShowValue");
@@ -197,7 +202,8 @@ const editorConfig = {
     previewsInData: true,
   },
   simpleUpload: {
-    uploadUrl: BaseUrl + 'api/upload/file',
+    uploadUrl: 'api/upload/file',
+    // uploadUrl: BaseUrl + 'api/upload/file',
     withCredentials: true,
   },
   image: {
@@ -245,7 +251,7 @@ function ClearContent() {
 }
 // 返回上一頁
 function BackPrePage() {
-  ClearContent();
+  // ClearContent();
   ShowValue.value = false;
   if (props.GetPageData) {
     props.GetPageData();
@@ -270,13 +276,13 @@ function PageTitle() {
   }
 }
 
-onMounted(() => {
-  GetOfficeData();
-});
+// onMounted(() => {
+//   GetOfficeData();
+// });
 </script>
 
 <template>
-  <div class="animate__animated animate__fadeIn">
+  <div class="animate__animated animate__fadeIn w-full">
     <div class="w-full md:w-4/5 flex flex-nowrap justify-center items-center mx-auto my-4 text-black">
       <p class="text-base">{{ PageTitle() }}</p>
       <DotLottieVue style="width: 80px" :src="props.LottieSrc" autoplay loop></DotLottieVue>
@@ -290,7 +296,7 @@ onMounted(() => {
           <!-- 標題 開始 -->
           <td style="text-align: center; font-weight: 900; padding: 0.5rem"
             class="text-sm md:text-lg border-r w-[60px] md:min-w-[100px]">
-            head.Value
+            {{ t(`${head.Value}`) }}
           </td>
           <!-- 標題 結束 -->
           <!-- 附檔 開始 -->
@@ -356,7 +362,7 @@ onMounted(() => {
           </template>
           <!-- 分類 結束 -->
           <!-- 發布單位 開始 -->
-          <template v-else-if="head.Key == 'Create'">
+          <!-- <template v-else-if="head.Key == 'Create'">
             <td style="text-align: start; padding: 0.5rem" class="text-xs md:text-base"
               v-if="props.Setting && OfficeData">
               <SelectSearch v-model:OptionsList="OfficeData" v-model:ModelValue="props.DetailData.Create"
@@ -365,7 +371,7 @@ onMounted(() => {
             <td style="text-align: start; padding: 0.5rem" class="text-xs md:text-base" v-else>
               {{ props.DetailData[head.Key] }}
             </td>
-          </template>
+          </template> -->
           <!-- 發布單位 結束 -->
           <!-- 置頂 開始 -->
           <template v-else-if="head.Key == 'Top'">

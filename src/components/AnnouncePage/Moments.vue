@@ -29,7 +29,6 @@ onMounted(() => {
 </script>
 <template>
   <div>
-    <Breadcrumb :BreadcrumbList="['活動相簿', '每日花絮']" class="mx-4 w-full"></Breadcrumb>
     <div class="flex flex-wrap justify-start">
       <div v-for="(item, index) in momentData" :key="item.id" class="w-1/4">
         <Card v-if="props.indexNum ? index < props.indexNum : momentData.length" :content="item.content"

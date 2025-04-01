@@ -31,6 +31,12 @@ const props = defineProps(["MenuList"]);
         <p class="mx-2">{{ t('電話') }}：03-3892762 {{ t('傳真') }}：03-3906990</p>
       </div>
       <p>{{ t('瀏覽器建議') }}</p>
+      <div class="mx-auto w-full flex justify-center items-center">
+        <p>瀏覽人次：</p>
+        <a href="https://cn.web-counter.net" title="計數器">
+          <img src="https://www.web-counter.net/count_20091204.php?c=0VaY2nf7Wq2" alt="計數器">
+        </a>
+      </div>
     </div>
   </div>
 </template>

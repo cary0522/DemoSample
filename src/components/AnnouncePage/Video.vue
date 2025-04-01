@@ -29,7 +29,6 @@ onMounted(() => {
 </script>
 <template>
   <div>
-    <Breadcrumb :BreadcrumbList="['活動相簿', '宣傳影片']" class="mx-4"></Breadcrumb>
     <div class="flex flex-wrap mx-auto justify-center">
       <div v-for="(item, index) in VideoData" :key="item.id">
         <template v-if="

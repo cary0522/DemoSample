@@ -8,6 +8,7 @@ import Calendar from '@/components/InfoPage/Calendar.vue'
 import Organization from '@/components/InfoPage/Organization.vue'
 import Logo from '@/components/InfoPage/Logo.vue'
 import Activity from './Activity.vue'
+import Breadcrumb from '@/components/BaseComponents/Breadcrumb.vue'
 
 const router = useRouter()
 
@@ -24,6 +25,8 @@ const OptionsList = ref([
             <div class="flex">
                 <LeftOptions :OptionsList="OptionsList" class="w-1/3" />
                 <div class="w-full flex flex-wrap">
+                    <Breadcrumb :-breadcrumb-list="['認識我們', router.currentRoute.value.meta.title]" class="w-full">
+                    </Breadcrumb>
                     <!-- <Search class="w-full"></Search> -->
                     <Calendar v-if="router.currentRoute.value.path === '/info/calendar'" />
                     <Organization v-if="router.currentRoute.value.path === '/info/organization'" />

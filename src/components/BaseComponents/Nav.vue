@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import logoImageUrl from "/images/logo.jpg";
 import Link from "@/components/BaseComponents/Link.vue";
@@ -36,6 +36,14 @@ window.addEventListener("load", () => {
     isMenuVisible.value = false;
   }
 });
+
+onMounted(() => {
+  if (window.innerWidth >= 768) {
+    isMenuVisible.value = true;
+  } else {
+    isMenuVisible.value = false;
+  }
+})
 
 </script>
 <template>
@@ -122,9 +130,9 @@ window.addEventListener("load", () => {
             </Link>
           </div>
         </div>
-        <router-link to="/login" class="transition-all hover:bg-gray-300 cursor-pointer me-2 my-1">
+        <!-- <router-link to="/login" class="transition-all hover:bg-gray-300 cursor-pointer me-2 my-1">
           <font-awesome-icon :icon="['fas', 'right-to-bracket']" />
-          系統登入</router-link>
+          系統登入</router-link> -->
       </div>
       <!--手機選單內容 結束-->
     </div>

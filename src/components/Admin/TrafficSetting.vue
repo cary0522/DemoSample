@@ -139,9 +139,11 @@ const editorConfig = {
       <div class="w-2/5 p-4">
         <AreaTitle :titleContent="'編輯'"></AreaTitle>
         <div class="w-4/5 min-h-[300px] h-auto mx-8">
-          <ckeditor v-model="editorData" :editor="editor" :height="300" :config="editorConfig">
+          <ckeditor v-model="editorData" :editor="editor" :height="300" :config="editorConfig"
+            @Change="() => { console.log(editorData) }">
           </ckeditor>
         </div>
+        <Button :-btn-text="'確認'" :-click-function="() => { console.log(editorData) }"></Button>
       </div>
       <div class="w-2/5 p-4">
         <AreaTitle :titleContent="'預覽'"></AreaTitle>

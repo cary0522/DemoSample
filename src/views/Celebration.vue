@@ -8,14 +8,15 @@ import Opening from '@/components/CelebrationPage/Opening.vue'
 import AwardProcess from '@/components/CelebrationPage/AwardProcess.vue'
 import OpeningLIVE from '@/components/CelebrationPage/OpeningLIVE.vue'
 import AwardLIVE from '@/components/CelebrationPage/AwardLIVE.vue'
+import Breadcrumb from '@/components/BaseComponents/Breadcrumb.vue'
 
 const router = useRouter()
 
 const OptionsList = ref([
-    { Value: '開幕典禮流程', Path: '/celebration/opening' },
-    { Value: '頒獎典禮流程', Path: '/celebration/awardProcess' },
-    { Value: '開幕典禮LIVE', Path: '/celebration/openingLIVE' },
-    { Value: '頒獎典禮LIVE', Path: '/celebration/awardLIVE' },
+    { Value: '111學年度策盟成果', Path: '/celebration/opening' },
+    { Value: '110學年度策盟成果', Path: '/celebration/awardProcess' },
+    { Value: '復興區策盟成果', Path: '/celebration/openingLIVE' },
+    { Value: '成果填報', Path: '/celebration/awardLIVE' },
 ])
 </script>
 <template>
@@ -23,6 +24,8 @@ const OptionsList = ref([
         <div class="flex">
             <LeftOptions :OptionsList="OptionsList" class="w-1/3" />
             <div class="flex flex-wrap w-full">
+                <Breadcrumb :-breadcrumb-list="['策盟成果', router.currentRoute.value.meta.title]" class="w-full">
+                </Breadcrumb>
                 <Search class="w-full" />
                 <Opening v-if="router.currentRoute.value.path === '/celebration/opening'" />
                 <AwardProcess v-if="router.currentRoute.value.path === '/celebration/awardProcess'" />
