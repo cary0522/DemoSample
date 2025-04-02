@@ -35,8 +35,8 @@ npm run demo
 
 ```json
 "setting": {
-  "WebTitle": "桃園市政府原住民族教育資源中心",
-  "SideTitle": "Taoyuan Indigenous Education Resource Center"
+  "WebTitle": "",
+  "SideTitle": ""
 }
 ```
 
