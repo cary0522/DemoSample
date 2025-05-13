@@ -19,7 +19,7 @@
             "fas",
             "circle-exclamation"
           ],
-          "path": "/info/calendar"
+          "path": "/about/introduction"
         },
         {
           "name": "中心任務",
@@ -28,16 +28,16 @@
             "fas",
             "list-check"
           ],
-          "path": "/info/organization"
+          "path": "/about/mission"
         },
         {
           "name": "組織分工",
-          "englishName": "Logo",
+          "englishName": "Division",
           "icon": [
             "fas",
             "users"
           ],
-          "path": "/info/logo"
+          "path": "/about/division"
         },
         {
           "name": "聯絡我們",
@@ -46,7 +46,7 @@
             "fas",
             "comments"
           ],
-          "path": "/activity"
+          "path": "/about/contact"
         }
       ],
       "ShowItem": false
@@ -58,7 +58,6 @@
         "fas",
         "newspaper"
       ],
-      "path": "/announce",
       "items": [
         {
           "name": "中心最新消息",
@@ -76,7 +75,7 @@
             "fas",
             "newspaper"
           ],
-          "path": "/announce/moments"
+          "path": "/announce/cip"
         },
         {
           "name": "原民局最新消息",
@@ -85,7 +84,7 @@
             "fas",
             "newspaper"
           ],
-          "path": "/announce/highlights"
+          "path": "/announce/dia"
         },
         {
           "name": "原視新聞",
@@ -94,7 +93,7 @@
             "fas",
             "newspaper"
           ],
-          "path": "/announce/video"
+          "path": "/announce/titv"
         }
       ],
       "ShowItem": false
@@ -109,52 +108,52 @@
       "items": [
         {
           "name": "泰雅",
-          "englishName": "Schedule",
+          "englishName": "Atayal",
           "icon": [
             "fas",
             "book"
           ],
-          "path": "/competition/schedule"
+          "path": "/resources/atayal"
         },
         {
           "name": "布農",
-          "englishName": "Files",
+          "englishName": "Bunun",
           "icon": [
             "fas",
             "book"
           ],
-          "path": "/competition/file"
+          "path": "/resources/bunun"
         },
         {
           "name": "排灣",
-          "englishName": "Excellent Instructor",
+          "englishName": "Paiwan",
           "icon": [
             "fas",
             "book"
           ],
-          "path": "/competition/excellentInstructor"
+          "path": "/resources/paiwan"
         },
         {
           "name": "太鲁閣",
-          "englishName": "Award",
+          "englishName": "Taroko",
           "icon": [
             "fas",
             "book"
           ],
-          "path": "/competition/award"
+          "path": "/resources/taroko"
         },
         {
           "name": "阿美",
-          "englishName": "Award",
+          "englishName": "Amis",
           "icon": [
             "fas",
             "book"
           ],
-          "path": "/competition/award"
+          "path": "/resources/amis"
         },
         {
           "name": "部落大學電子書",
-          "englishName": "Award",
+          "englishName": "Ebook",
           "icon": [
             "fas",
             "swatchbook"
@@ -163,7 +162,7 @@
         },
         {
           "name": "檔案下載",
-          "englishName": "Award",
+          "englishName": "Files",
           "icon": [
             "fas",
             "file"
@@ -172,18 +171,27 @@
         },
         {
           "name": "典藏文物",
-          "englishName": "Award",
+          "englishName": "Collection",
           "icon": [
             "fas",
             "file-lines"
           ],
           "path": "https://docs.google.com/spreadsheets/d/13ccpNo4Jnsgkq2IpwbZQ-4xReCI0e8RZVMs643HT3P0/edit?usp=sharing"
+        },
+        {
+          "name": "全市族語師資查詢",
+          "englishName": "Teachers",
+          "icon": [
+            "fas",
+            "file-lines"
+          ],
+          "path": "/resources/teachers"
         }
       ],
       "ShowItem": false
     },
     {
-      "groupName": "活動成果",
+      "groupName": "策略聯盟",
       "englishName": "Achievements",
       "icon": [
         "fas",
@@ -191,55 +199,64 @@
       ],
       "items": [
         {
+          "name": "年度計畫與成果展示",
+          "englishName": "Announce",
+          "icon": [
+            "fas",
+            "photo-film"
+          ],
+          "path": "/results/achievements"
+        },
+        {
           "name": "活動相簿",
           "englishName": "Announce",
           "icon": [
             "fas",
             "photo-film"
           ],
-          "path": "https://drive.google.com/drive/folders/1NCwZjABuLDNoV599w4rxBv9uV7xhVvw2?usp=drive_link"
-        },
-        {
-          "name": "111學年度策盟成果",
-          "englishName": "Celebration Opening",
-          "icon": [
-            "fas",
-            "link"
-          ],
-          "path": "https://sites.google.com/mail.hfps.tyc.edu.tw/111irc?usp=sharing"
-        },
-        {
-          "name": "110學年度策盟成果",
-          "englishName": "AwardProcess",
-          "icon": [
-            "fas",
-            "link"
-          ],
-          "path": "https://sites.google.com/mail.hfps.tyc.edu.tw/110irc?usp=sharing"
-        },
-        {
-          "name": "復興區策盟成果",
-          "englishName": "Opening LIVE",
-          "icon": [
-            "fas",
-            "link"
-          ],
-          "path": "https://fuxing.sa.tyc.edu.tw/"
+          "path": "/results/album"
         },
         {
           "name": "成果填報",
-          "englishName": "Award LIVE",
+          "englishName": "Results reporting",
           "icon": [
             "fas",
             "star"
           ],
-          "path": "/celebration/awardLIVE"
+          "path": "/results/writing"
+        },
+        {
+          "name": "復興區策盟成果",
+          "englishName": "Results reporting",
+          "icon": [
+            "fas",
+            "star"
+          ],
+          "path": "https://fuxing.sa.tyc.edu.tw/"
+        },
+        {
+          "name": "110學年度策盟成果",
+          "englishName": "Results reporting",
+          "icon": [
+            "fas",
+            "star"
+          ],
+          "path": "https://sites.google.com/mail.hfps.tyc.edu.tw/110irc?usp=sharing"
+        },
+        {
+          "name": "111學年度策盟成果",
+          "englishName": "Results reporting",
+          "icon": [
+            "fas",
+            "star"
+          ],
+          "path": "https://sites.google.com/mail.hfps.tyc.edu.tw/111irc?usp=sharing"
         }
       ],
       "ShowItem": false
     },
     {
-      "groupName": "各子計畫",
+      "groupName": "課程暨教學組",
       "englishName": "Plans",
       "icon": [
         "fas",
@@ -247,76 +264,96 @@
       ],
       "items": [
         {
-          "name": "影音紀錄",
+          "name": "教案",
           "englishName": "Video",
-          "icon": [
-            "fas",
-            "video"
-          ],
-          "path": "/serve/contact"
-        },
-        {
-          "name": "課後族語班",
-          "englishName": "Accommodation Information",
-          "icon": [
-            "fas",
-            "language"
-          ],
-          "path": "/serve/accommodation"
-        },
-        {
-          "name": "原住民族教育數位平台",
-          "englishName": "Gift Information",
-          "icon": [
-            "fas",
-            "globe"
-          ],
-          "path": "/serve/gift"
-        },
-        {
-          "name": "原住民族知識體系",
-          "englishName": "Traffic Information",
-          "icon": [
-            "fas",
-            "brain"
-          ],
-          "path": "/serve/traffic"
-        },
-        {
-          "name": "師資培訓",
-          "englishName": "Parking Information",
-          "icon": [
-            "fas",
-            "person-chalkboard"
-          ],
-          "path": "/serve/parking"
-        },
-        {
-          "name": "三一教學",
-          "englishName": "Traffic Floor Plan",
           "icon": [
             "fas",
             "chalkboard-user"
           ],
-          "path": "/serve/trafficFloorPlan"
+          "path": "/plans/video"
         },
         {
-          "name": "多元方案",
-          "englishName": "Shuttle Bus",
+          "name": "照片",
+          "englishName": "After-school ethnic language classes",
           "icon": [
             "fas",
-            "people-roof"
+            "photo-film"
           ],
-          "path": "/serve/shuttle"
+          "path": "/plans/language"
         },
         {
-          "name": "教材編輯",
-          "englishName": "Shuttle Bus Map",
+          "name": "影片",
+          "englishName": "Indigenous Education Digital Platform",
           "icon": [
             "fas",
-            "recycle"
+            "video"
           ],
-          "path": "/serve/shuttleMap"
+          "path": "/plans/digital"
+        },
+        {
+          "name": "計畫",
+          "englishName": "Aboriginal knowledge systems",
+          "icon": [
+            "fas",
+            "brain"
+          ],
+          "path": "/plans/knowledge"
+        },
+        {
+          "name": "補充教材",
+          "englishName": "Teacher Training",
+          "icon": [
+            "fas",
+            "person-chalkboard"
+          ],
+          "path": "/plans/teacherTraining"
+        },
+        {
+          "name": "研習公告",
+          "englishName": "Teaching in the Trinity Way",
+          "icon": [
+            "fas",
+            "newspaper"
+          ],
+          "path": "/plans/trinity"
+        }
+      ],
+      "ShowItem": false
+    },
+    {
+      "groupName": "師資培訓組",
+      "englishName": "Teacher Training",
+      "icon": [
+        "fas",
+        "users"
+      ],
+      "items": [
+        {
+          "name": "研習公告",
+          "englishName": "Video",
+          "icon": [
+            "fas",
+            "newspaper"
+          ],
+          "path": "/activity/announcements"
+        },
+        {
+          "name": "研習報名",
+          "englishName": "After-school ethnic language classes",
+          "icon": [
+            "fas",
+            "id-card"
+          ],
+          "path": "/activity/registration"
+        },
+        {
+          "name": "成果照片",
+          "englishName": "Indigenous Education Digital Platform",
+          "icon": [
+            "fas",
+            "photo-film"
+          ],
+          "path": "/activity/highlights"
         }
       ],
       "ShowItem": false
@@ -373,6 +410,53 @@
             "link"
           ],
           "path": "/link/center"
+        }
+      ],
+      "ShowItem": false
+    },
+    {
+      "groupName": "資源專區",
+      "englishName": "Download",
+      "icon": [
+        "fas",
+        "file-lines"
+      ],
+      "items": [
+        {
+          "name": "政策法規",
+          "englishName": "rules",
+          "icon": [
+            "fas",
+            "scale-balanced"
+          ],
+          "path": "/download/rules"
+        },
+        {
+          "name": "原教文件",
+          "englishName": "files",
+          "icon": [
+            "fas",
+            "file"
+          ],
+          "path": "/download/files"
+        },
+        {
+          "name": "表單下載",
+          "englishName": "forms",
+          "icon": [
+            "fas",
+            "table"
+          ],
+          "path": "/download/forms"
+        },
+        {
+          "name": "申請資料",
+          "englishName": "data",
+          "icon": [
+            "fas",
+            "list-check"
+          ],
+          "path": "/download/data"
         }
       ],
       "ShowItem": false

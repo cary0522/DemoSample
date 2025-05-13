@@ -2,6 +2,7 @@
 import { ref, onMounted } from "vue";
 import ApiHelper from "@/helpers/ApiHelper.js";
 import Breadcrumb from "@/components/BaseComponents/Breadcrumb.vue";
+import VideoJson from "@/assets/Video.json";
 
 const props = defineProps(["indexNum"]);
 
@@ -24,7 +25,7 @@ function GetData() {
 }
 
 onMounted(() => {
-  GetData();
+  VideoData.value = VideoJson;
 });
 </script>
 <template>

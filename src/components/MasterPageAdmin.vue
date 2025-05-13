@@ -59,7 +59,7 @@ const toggleMenuVisibility = () => {
 //選單控制
 let isMenuVisible = ref(false);
 //Logo位置
-const logoImageUrl = ref("/images/logo.jpg");
+import logoImageUrl from "/images/logo.jpg";
 
 //從VueRouter取得PageName
 const router = useRouter();
@@ -90,14 +90,15 @@ window.addEventListener("load", () => {
     <!--Logo-->
     <div class="AdminHeaderBoxFloat">
       <div class="AdminHeaderLogo">
-        <router-link to="/"><img :src="logoImageUrl" alt="logo" class='rounded-full object-contain' /></router-link>
+        <router-link to="/"><img loading="lazy" :src="logoImageUrl" alt="logo"
+            class='rounded-full object-contain' /></router-link>
       </div>
     </div>
     <!--Logo End-->
     <!--Title Start-->
     <div class="AdminHeaderTitle">
       <div class="mx-4 md:hidden w-[50px] object-contain">
-        <router-link to="/"><img class="mx-4 rounded-full object-contain" :src="logoImageUrl"
+        <router-link to="/"><img loading="lazy" class="mx-4 rounded-full object-contain" :src="logoImageUrl"
             alt="logo" /></router-link>
       </div>
       <div>

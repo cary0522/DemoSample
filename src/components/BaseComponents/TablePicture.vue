@@ -127,7 +127,7 @@ onMounted(() => {
                 <p>上傳圖片預覽</p>
                 <div
                     class="mx-auto w-[170px] lg:w-[200px] my-4 h-[200px] border-2 border-gray-300 border-dashed flex items-center rounded">
-                    <img :src="PictureSrc" alt="" class="rounded-full object-contain max-w-full">
+                    <img loading="lazy" :src="PictureSrc" alt="" class="rounded-full object-contain max-w-full">
                 </div>
             </div>
             <div class="md:w-1/2 lg:w-2/3 2xl:w-1/3 flex flex-wrap">

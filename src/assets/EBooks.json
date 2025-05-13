@@ -1,26 +1,32 @@
 [
     {
         "id": 1,
-        "link": "/competition/schedule",
+        "link": "/resources/atayal",
         "title": "泰雅",
         "image": "./images/EBooks/001.png"
     },
     {
         "id": 2,
-        "link": "/competition/file",
+        "link": "/resources/bunun",
         "title": "布農",
         "image": "./images/EBooks/002.png"
     },
     {
         "id": 3,
-        "link": "/competition/excellentInstructor",
+        "link": "/resources/paiwan",
         "title": "排灣",
         "image": "./images/EBooks/003.png"
     },
     {
         "id": 4,
-        "link": "/competition/award",
+        "link": "/resources/taroko",
         "title": "太鲁閣",
         "image": "./images/EBooks/004.png"
+    },
+    {
+        "id": 5,
+        "link": "/resources/amis",
+        "title": "阿美",
+        "image": "./images/EBooks/005.png"
     }
 ]

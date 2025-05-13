@@ -66,8 +66,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative my-4">
-    <v-carousel cycle v-if="BannerData.length > 0" id="BannerImg" next-icon='$next' height="60vh" width="100%">
+  <div class="relative my-8">
+    <v-carousel cycle v-if="BannerData.length > 0" id="BannerImg" next-icon='$next' height="60vh" width="100%"
+      :cycle="true" interval="15000">
       <template v-for="item in BannerData">
         <v-carousel-item :id="item.id" :src="item.image" cover>
         </v-carousel-item>

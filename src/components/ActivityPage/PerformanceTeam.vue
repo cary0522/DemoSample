@@ -1,6 +1,8 @@
 <script setup>
-import UserPage from '@/components/MasterPageUser.vue'
+import { reactive, onMounted } from 'vue'
+import ApiHelper from "@/helpers/ApiHelper";
 import Card from '../BaseComponents/Card.vue';
+import PhotoJson from '@/assets/Photo.json'
 
 // 搜尋資料
 const SearchData = reactive({
@@ -24,25 +26,20 @@ function GetPageData() {
         "POST",
         SearchData,
         (res) => {
-            if (res.status == 200) {
-                PageData.TotalCount = res.data.TotalCount;
-                PageData.MaxPage = res.data.MaxPage;
-                PageData.DataList = res.data.DataList;
-            }
+            PageData.TotalCount = res.data.TotalCount;
+            PageData.MaxPage = res.data.MaxPage;
+            PageData.DataList = res.data.DataList;
         },
         (err) => {
+            PageData.DataList = PhotoJson;
             ApiHelper.ProcessErrMsg(err);
         }
     );
 }
-
-onMounted(() => {
-    GetPageData();
-});
 </script>
 <template>
-    <div>
-        <div v-for="team in PageData.DataList">
+    <div class="flex flex-wrap justify-center">
+        <div v-for="team in PhotoJson">
             <Card :title="team.title" :content="team.content" :img="team.img" :link="team.link"></Card>
         </div>
     </div>

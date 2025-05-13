@@ -9,7 +9,7 @@ const props = defineProps(["indexNum"]);
 const momentData = ref([]);
 function GetPageData() {
   ApiHelper.Axios(
-    "api/announce/moments",
+    "api/announce",
     "GET",
     null,
     (res) => {

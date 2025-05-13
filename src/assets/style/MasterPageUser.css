@@ -12,7 +12,7 @@
   }
 
   .HeaderTitle {
-    @apply text-defaultColor flex items-center justify-around text-base md:text-lg relative left-[35px] md:left-[0px] top-[50%] translate-y-[-50%] font-bold;
+    @apply text-defaultColor flex md:block items-center justify-around text-base md:text-lg relative left-[35px] md:left-[0px] top-[50%] translate-y-[-50%] font-bold;
   }
 
   main {
@@ -40,7 +40,7 @@
   }
 
   .ContentBox {
-    @apply relative w-full h-full overflow-y-hidden px-8 py-8 pt-[200px] z-0;
+    @apply relative w-full h-full overflow-y-hidden px-1 md:px-8 pt-[280px] md:pt-[200px] z-0;
   }
 
   .MenuActive {
@@ -59,10 +59,3 @@ header {
 .ContentBox::-webkit-scrollbar {
   display: none;
 }
-
-/* table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-} */

@@ -2,7 +2,7 @@
 import AreaTitle from "@/components/BaseComponents/AreaTitle.vue";
 </script>
 <template>
-    <div>
+    <div class="my-4">
         <h3 class="font-bold text-lg py-2">桃園市原住民族教育資源中心歷年的發展與轉型</h3>
         <div>
             <ul>
@@ -22,6 +22,6 @@ import AreaTitle from "@/components/BaseComponents/AreaTitle.vue";
             </ul>
         </div>
         <AreaTitle :titleContent="'組織架構'"></AreaTitle>
-        <img src="/images/organize.png">
+        <img loading="lazy" src="../../../public/images/organize.png">
     </div>
 </template>

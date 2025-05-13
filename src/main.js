@@ -30,6 +30,8 @@ const vuetify = createVuetify({
     }
 },);
 
+import Vue3Marquee from "vue3-marquee";
+
 const app = createApp(App);
 const pinia = createPinia();
 pinia.use(createPersistedState);
@@ -40,10 +42,11 @@ const currentRoute = router.currentRoute.value;
 window.document.title = currentRoute.meta.title;
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.use(vuetify);
+app.use(Vue3Marquee);
 
 import ch from "./i18n/ch.json";
 import en from "./i18n/en.json";
-import ja from "./i18n/ja.json";
+import SaikolikAtayal from "./i18n/SaikolikAtayal.json";
 
 const i18n = createI18n({
     legacy: false,
@@ -51,7 +54,8 @@ const i18n = createI18n({
     fallbackLocale: 'en',
     messages: {
         en,
-        ch
+        ch,
+        SaikolikAtayal
     }
 })
 app.use(i18n);

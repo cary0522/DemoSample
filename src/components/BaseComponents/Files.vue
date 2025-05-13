@@ -7,7 +7,7 @@ import UploadFiles from "./UploadFiles.vue";
 import Swal from "sweetalert2";
 
 import { useI18n } from "vue-i18n";
-const { t, locale } = useI18n();
+const { t } = useI18n();
 
 // 接收資料
 const props = defineProps([
@@ -155,12 +155,12 @@ const BatchOperate = function (BatchType) {
           </div>
           <div class="min-w-[60px] max-w-[120px] w-1/4 my-2 object-contain flex flex-col justify-center">
             <a :href="element.path">
-              <img :src="FileImg" alt="" />
+              <img loading="lazy" :src="FileImg" alt="" />
             </a>
           </div>
           <div class="w-2/3 text-black py-4 flex flex-col justify-around">
             <div class="flex flex-wrap" v-for="head in HeaderList">
-              <p>head.Value ：</p>
+              <p>{{ head.Value }} ：</p>
               <p>{{ element[head.Key] }}</p>
             </div>
             <div class="lg:flex flex-wrap text-xs md:text-sm">
@@ -175,7 +175,7 @@ const BatchOperate = function (BatchType) {
               <p class="1/5">檔案下載：</p>
               <div class="flex flex-wrap w-4/5" v-for="(item, index) in element.FilesList">
                 <p class="cursor-pointer" @click="DownLoadFunction(item.ID, item.name)">
-                  {{ item.name }}
+                  {{ item.Name }}
                 </p>
                 <span class="hidden lg:inline-block">｜</span>
                 <p>

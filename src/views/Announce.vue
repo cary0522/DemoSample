@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, onMounted, watch } from "vue";
+import { ref, reactive, onMounted, watch, nextTick } from "vue";
 import { useRouter } from "vue-router";
 import UserPage from "@/components/MasterPageUser.vue";
 import ApiHelper from "@/helpers/ApiHelper";
@@ -18,9 +18,9 @@ const router = useRouter();
 
 const OptionsList = ref([
   { Value: "中心最新消息", Path: "/announce/latestNews" },
-  { Value: "原委會最新消息", Path: "/announce/moments" },
-  { Value: "原民局最新消息", Path: "/announce/highlights" },
-  { Value: "原視新聞", Path: "/announce/video" },
+  { Value: "原委會最新消息", Path: "/announce/cip" },
+  { Value: "原民局最新消息", Path: "/announce/dia" },
+  { Value: "原視新聞", Path: "/announce/titv" },
 ]);
 
 // 搜尋資料
@@ -43,16 +43,20 @@ const DetailShow = ref(false);
 function GetPageData() {
   DetailShow.value = false;
   PageData.value = LatestNewsJson
-  TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-  if (router.currentRoute.value.path == "/announce/latestNews") {
-    TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-  } else if (router.currentRoute.value.path == "/announce/moments") {
-    TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-  } else if (router.currentRoute.value.path == "/announce/highlights") {
-    TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-  } else if (router.currentRoute.value.path == "/announce/video") {
-    TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-  }
+  nextTick(() => {
+    if (PageData.value.DataList.length > 0) {
+      TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
+      if (router.currentRoute.value.path == "/announce/latestNews") {
+        TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
+      } else if (router.currentRoute.value.path == "/announce/cip") {
+        TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
+      } else if (router.currentRoute.value.path == "/announce/dia") {
+        TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
+      } else if (router.currentRoute.value.path == "/announce/titv") {
+        TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
+      }
+    }
+  })
 }
 
 // 表格欄位
@@ -100,33 +104,26 @@ onMounted(() => {
 
 watch(
   () => router.currentRoute.value.path,
-  (newPath) => {
+  () => {
     GetPageData()
-    // if (newPath == "/announce/latestNews") {
-    //   TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-    // } else if (newPath == "/announce/moments") {
-    //   TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-    // } else if (newPath == "/announce/highlights") {
-    //   TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-    // } else if (newPath == "/announce/video") {
-    //   TableData.value = PageData.value.DataList.filter((item) => item.Category == router.currentRoute.value.meta.title);
-    // }
   }
 );
 </script>
 <template>
   <div>
     <UserPage>
-      <div class="flex justify-between mx-4">
+      <div class="flex w-full justify-between mx-4">
         <LeftOptions :OptionsList="OptionsList" :select="false" class="w-1/3"></LeftOptions>
         <div class="w-full flex flex-wrap">
           <Search class="w-full"></Search>
           <Breadcrumb :-breadcrumb-list="['最新消息', router.currentRoute.value.meta.title]" class="w-full"></Breadcrumb>
           <TableContent v-if="DetailShow" :DetailHeader="DetailHeader" :GetPageData="GetPageData"
             :DetailData="DetailData" v-model:ShowValue="DetailShow"></TableContent>
-          <Table v-else v-if="TableData" :TableHeader="TableHeader" :GetPageData="GetPageData"
-            v-model:TableData="TableData" :DetailFunction="DetailFunction" :Pointer="true">
-          </Table>
+          <template v-else>
+            <Table v-if="TableData.length > 0" :TableHeader="TableHeader" :GetPageData="GetPageData"
+              v-model:TableData="TableData" :DetailFunction="DetailFunction" :Pointer="true">
+            </Table>
+          </template>
         </div>
       </div>
     </UserPage>

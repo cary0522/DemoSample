@@ -1,0 +1,972 @@
+[
+    {
+        "Index": 1,
+        "序號": 1,
+        "Language": "海岸阿美語",
+        "Name": "曾純美",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "林森國小",
+        "Phone": "03-4579213",
+        "Area": "中壢區、平鎮區、大溪區、八德區"
+    },
+    {
+        "Index": 2,
+        "序號": 2,
+        "Language": "海岸阿美語",
+        "Name": "馬美惠",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "仁和國小",
+        "Phone": "03-3076626",
+        "Area": "大溪區、八德區、平鎮區"
+    },
+    {
+        "Index": 3,
+        "序號": 3,
+        "Language": "海岸阿美語",
+        "Name": "鄭美雲",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "南美國小",
+        "Phone": "03-3126250",
+        "Area": "桃園區、龜山區"
+    },
+    {
+        "Index": 4,
+        "序號": 4,
+        "Language": "海岸阿美語",
+        "Name": "馬金英",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "高榮國小",
+        "Phone": "03-4782314",
+        "Area": "龍潭區、楊梅區、中壢區、大溪區"
+    },
+    {
+        "Index": 5,
+        "序號": 5,
+        "Language": "海岸阿美語",
+        "Name": "王美宣",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "草漯國小",
+        "Phone": "03-4830160",
+        "Area": "新屋區、觀音區"
+    },
+    {
+        "Index": 6,
+        "序號": 6,
+        "Language": "海岸阿美語",
+        "Name": "阿莉克‧儒夷‧古優安",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "同德國小",
+        "Phone": "03-3176403",
+        "Area": "龜山區"
+    },
+    {
+        "Index": 7,
+        "序號": 7,
+        "Language": "馬蘭阿美語",
+        "Name": "李美莉",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 8,
+        "序號": 8,
+        "Language": "秀姑巒阿美語",
+        "Name": "林金川",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 9,
+        "序號": 9,
+        "Language": "海岸阿美語",
+        "Name": "卓文慧",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 10,
+        "序號": 10,
+        "Language": "南勢阿美語",
+        "Name": "孫秀蘭",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "大忠國小",
+        "Phone": "03-3635206",
+        "Area": "大溪區、八德區、平鎮區"
+    },
+    {
+        "Index": 11,
+        "序號": 11,
+        "Language": "海岸阿美語",
+        "Name": "黃淑珍",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "龍潭國小",
+        "Phone": "03-4792014",
+        "Area": "中壢區、平鎮區、龍潭區、八德區"
+    },
+    {
+        "Index": 12,
+        "序號": 12,
+        "Language": "馬蘭阿美語",
+        "Name": "林佑洵",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 13,
+        "序號": 13,
+        "Language": "海岸阿美語",
+        "Name": "黃玉靈",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "瑞塘國小",
+        "Phone": "03-4316360",
+        "Area": "中壢區、楊梅區、八德區、桃園區"
+    },
+    {
+        "Index": 14,
+        "序號": 14,
+        "Language": "秀姑巒阿美語",
+        "Name": "鄭秋梅",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "埔心國小",
+        "Phone": "03-381-2304",
+        "Area": "桃園區、龜山區、蘆竹區、中壢區、大園區"
+    },
+    {
+        "Index": 15,
+        "序號": 15,
+        "Language": "海岸阿美語",
+        "Name": "苡鄧．舞慕司",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 16,
+        "序號": 16,
+        "Language": "海岸阿美語",
+        "Name": "楊麗芳",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "仁善國小",
+        "Phone": "03-3801710",
+        "Area": "大溪區、平鎮區"
+    },
+    {
+        "Index": 17,
+        "序號": 17,
+        "Language": "海岸阿美語",
+        "Name": "黃李翠雲",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "北勢國小",
+        "Phone": "03-4586472",
+        "Area": "中壢區、平鎮區"
+    },
+    {
+        "Index": 18,
+        "序號": 18,
+        "Language": "秀姑巒阿美語",
+        "Name": "陳秀娥",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "沙崙國小",
+        "Phone": "03-3835072",
+        "Area": "蘆竹區、大園區、觀音區"
+    },
+    {
+        "Index": 19,
+        "序號": 19,
+        "Language": "海岸阿美語",
+        "Name": "陳文昌",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "華勛國小",
+        "Phone": "03-4661587",
+        "Area": "中壢區"
+    },
+    {
+        "Index": 20,
+        "序號": 20,
+        "Language": "秀姑巒阿美語",
+        "Name": "彭三妹",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 21,
+        "序號": 21,
+        "Language": "秀姑巒阿美語",
+        "Name": "江秀英",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 22,
+        "序號": 22,
+        "Language": "馬蘭阿美語",
+        "Name": "江寶珠",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "大溪國小",
+        "Phone": "03-2728421",
+        "Area": "八德區、大溪區"
+    },
+    {
+        "Index": 23,
+        "序號": 23,
+        "Language": "秀姑巒阿美語",
+        "Name": "吳連成",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "桃園國中",
+        "Phone": "03-3358282",
+        "Area": "桃園區"
+    },
+    {
+        "Index": 24,
+        "序號": 24,
+        "Language": "秀姑巒阿美語",
+        "Name": "吳雅芳",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": "桃園區"
+    },
+    {
+        "Index": 25,
+        "序號": 25,
+        "Language": "海岸阿美語",
+        "Name": "李敬信",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "南崁國中",
+        "Phone": "03-3525590",
+        "Area": "蘆竹區"
+    },
+    {
+        "Index": 26,
+        "序號": 26,
+        "Language": "海岸阿美語",
+        "Name": "汪珠英",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "中原國小",
+        "Phone": "03-4385257",
+        "Area": "平鎮區、中壢區"
+    },
+    {
+        "Index": 27,
+        "序號": 27,
+        "Language": "海岸阿美語",
+        "Name": "林昌俊",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "北門國小",
+        "Phone": "03-3250959",
+        "Area": "桃園區"
+    },
+    {
+        "Index": 28,
+        "序號": 28,
+        "Language": "海岸阿美語",
+        "Name": "林春美",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "龍山國小",
+        "Phone": "03-3691253",
+        "Area": "桃園區、龜山區"
+    },
+    {
+        "Index": 29,
+        "序號": 29,
+        "Language": "海岸阿美語",
+        "Name": "林秋月",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 30,
+        "序號": 30,
+        "Language": "海岸阿美語",
+        "Name": "林秋霞",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "中正國小",
+        "Phone": "03-4559313",
+        "Area": "中壢區"
+    },
+    {
+        "Index": 31,
+        "序號": 31,
+        "Language": "海岸阿美語",
+        "Name": "洪裎寓",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": "楊梅區、平鎮區、大溪區"
+    },
+    {
+        "Index": 32,
+        "序號": 32,
+        "Language": "海岸阿美語",
+        "Name": "高生榮",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "龜山國中",
+        "Phone": "03-3205681",
+        "Area": "龜山區、桃園區、中壢區"
+    },
+    {
+        "Index": 33,
+        "序號": 33,
+        "Language": "海岸阿美語",
+        "Name": "高櫻花",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": "楊梅區、平鎮區、大溪區"
+    },
+    {
+        "Index": 34,
+        "序號": 34,
+        "Language": "秀姑巒阿美語",
+        "Name": "張文霖",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "菓林國小",
+        "Phone": "03-3835096",
+        "Area": "蘆竹區"
+    },
+    {
+        "Index": 35,
+        "序號": 35,
+        "Language": "秀姑巒阿美語",
+        "Name": "陳月雲",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "楓樹國小",
+        "Phone": "03-3206166",
+        "Area": "桃園區"
+    },
+    {
+        "Index": 36,
+        "序號": 36,
+        "Language": "秀姑巒阿美語",
+        "Name": "陳秀貞",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "文華國小",
+        "Phone": "03-3279014",
+        "Area": "龜山區"
+    },
+    {
+        "Index": 37,
+        "序號": 37,
+        "Language": "海岸阿美語",
+        "Name": "陳稚樺",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "武漢國小",
+        "Phone": "03-4792873",
+        "Area": "桃園區"
+    },
+    {
+        "Index": 38,
+        "序號": 38,
+        "Language": "馬蘭阿美語",
+        "Name": "葛勇嚴",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 39,
+        "序號": 39,
+        "Language": "馬蘭阿美語",
+        "Name": "蔣義雄",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "大崙國小",
+        "Phone": "03-4983424",
+        "Area": "中壢區、大園區、蘆竹區"
+    },
+    {
+        "Index": 40,
+        "序號": 40,
+        "Language": "南勢阿美語",
+        "Name": "吳家錦",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "大崗國中",
+        "Phone": "03-3280888",
+        "Area": "龜山區"
+    },
+    {
+        "Index": 41,
+        "序號": 1,
+        "Language": "賽考利克泰雅語",
+        "Name": "方瑞玉",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "楊心國小",
+        "Phone": "03-4758680",
+        "Area": "楊梅區、中壢區"
+    },
+    {
+        "Index": 42,
+        "序號": 2,
+        "Language": "賽考利克泰雅語",
+        "Name": "蘇秋梅",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "田心國小",
+        "Phone": "03-3872008",
+        "Area": "桃園市均可"
+    },
+    {
+        "Index": 43,
+        "序號": 3,
+        "Language": "賽考利克泰雅語",
+        "Name": "陳雅玲",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "元生國小",
+        "Phone": "03-4625566",
+        "Area": "中壢區、平鎮區、大溪區、復興區"
+    },
+    {
+        "Index": 44,
+        "序號": 4,
+        "Language": "賽考利克泰雅語",
+        "Name": "葉秋鳳",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "新勢國小",
+        "Phone": "03-4937563",
+        "Area": "中壢區、平鎮區"
+    },
+    {
+        "Index": 45,
+        "序號": 5,
+        "Language": "賽考利克泰雅語",
+        "Name": "璞戁•彼厚",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "富台國小",
+        "Phone": "03-4563335",
+        "Area": "八德區、平鎮區"
+    },
+    {
+        "Index": 46,
+        "序號": 6,
+        "Language": "賽考利克泰雅語",
+        "Name": "葉秋菊",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "八德國小",
+        "Phone": "03-3682943",
+        "Area": "桃園區、八德區"
+    },
+    {
+        "Index": 47,
+        "序號": 7,
+        "Language": "賽考利克泰雅語",
+        "Name": "陳振威",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "仁善國小",
+        "Phone": "03-3801710",
+        "Area": "大溪區、八德區、中壢區、平鎮區"
+    },
+    {
+        "Index": 48,
+        "序號": 8,
+        "Language": "賽考利克泰雅語",
+        "Name": "王秀玲",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "僑愛國小",
+        "Phone": "03-3891896",
+        "Area": "大溪區"
+    },
+    {
+        "Index": 49,
+        "序號": 9,
+        "Language": "賽考利克泰雅語",
+        "Name": "吉娃斯·米朗",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "長興國小",
+        "Phone": "03-3822178",
+        "Area": "復興區"
+    },
+    {
+        "Index": 50,
+        "序號": 10,
+        "Language": "賽考利克泰雅語",
+        "Name": "宗菊妹",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "長庚國小",
+        "Phone": "03-3182643",
+        "Area": "桃園區、龜山區"
+    },
+    {
+        "Index": 51,
+        "序號": 11,
+        "Language": "賽考利克泰雅語",
+        "Name": "林純桂",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "介壽國小",
+        "Phone": "03-3822364",
+        "Area": "復興區(前山)"
+    },
+    {
+        "Index": 52,
+        "序號": 12,
+        "Language": "賽考利克泰雅語",
+        "Name": "林雅僑",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 53,
+        "序號": 13,
+        "Language": "賽考利克泰雅語",
+        "Name": "姜李月蘭",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 54,
+        "序號": 14,
+        "Language": "賽考利克泰雅語",
+        "Name": "洪金輝",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 55,
+        "序號": 15,
+        "Language": "賽考利克泰雅語",
+        "Name": "高純慧",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "瑞埔國小",
+        "Phone": "03-4822018",
+        "Area": "中壢區、楊梅區、龍潭區、平鎮區"
+    },
+    {
+        "Index": 56,
+        "序號": 16,
+        "Language": "賽考利克泰雅語",
+        "Name": "張秀蘭",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 57,
+        "序號": 17,
+        "Language": "澤敖利泰雅語",
+        "Name": "梁玉水",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "忠福國小",
+        "Phone": "03-4340192",
+        "Area": "桃園區、八德區、大溪區、平鎮區"
+    },
+    {
+        "Index": 58,
+        "序號": 18,
+        "Language": "賽考利克泰雅語",
+        "Name": "莊梅雅",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "八德國中",
+        "Phone": "03-3682787",
+        "Area": "平鎮區、八德區、中壢區"
+    },
+    {
+        "Index": 59,
+        "序號": 19,
+        "Language": "賽考利克泰雅語",
+        "Name": "簡清源",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "奎輝國小",
+        "Phone": "03-3822177",
+        "Area": "復興區(前山)"
+    },
+    {
+        "Index": 60,
+        "序號": 20,
+        "Language": "賽考利克泰雅語",
+        "Name": "蘇秋華",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "大溪國小",
+        "Phone": "03-2728421",
+        "Area": "大溪區、龍潭區"
+    },
+    {
+        "Index": 61,
+        "序號": 21,
+        "Language": "賽考利克泰雅語",
+        "Name": "蘇新雄",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "三民國小",
+        "Phone": "03-3825294",
+        "Area": "復興區(前山)"
+    },
+    {
+        "Index": 62,
+        "序號": 22,
+        "Language": "賽考利克泰雅語",
+        "Name": "蘇鍾妙菊",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "長興國小",
+        "Phone": "03-3822178",
+        "Area": "復興區"
+    },
+    {
+        "Index": 63,
+        "序號": 1,
+        "Language": "東排灣語",
+        "Name": "周娟如",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "武漢國小",
+        "Phone": "03-4792873",
+        "Area": "龍潭區、楊梅區、八德區、平鎮區"
+    },
+    {
+        "Index": 64,
+        "序號": 2,
+        "Language": "北排灣語",
+        "Name": "韋麗珍",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "四維國小",
+        "Phone": "03-4822704",
+        "Area": "中壢、平鎮、龍潭、楊梅"
+    },
+    {
+        "Index": 65,
+        "序號": 3,
+        "Language": "南排灣語",
+        "Name": "曹芸溱",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "同安國小",
+        "Phone": "03-3269251",
+        "Area": "桃園區、龜山區"
+    },
+    {
+        "Index": 66,
+        "序號": 4,
+        "Language": "南排灣語",
+        "Name": "馬秀玉",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "大有國小",
+        "Phone": "03-3577715",
+        "Area": "龜山區、桃園區"
+    },
+    {
+        "Index": 67,
+        "序號": 5,
+        "Language": "中排灣語",
+        "Name": "陸木蘭",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "瑞豐國小",
+        "Phone": "03-3682787",
+        "Area": "八德區、大溪區"
+    },
+    {
+        "Index": 68,
+        "序號": 6,
+        "Language": "東排灣語",
+        "Name": "古安富",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "龍岡國中",
+        "Phone": "03-4562137",
+        "Area": "中壢區、八德區"
+    },
+    {
+        "Index": 69,
+        "序號": 7,
+        "Language": "東排灣語",
+        "Name": "古翃瑜",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 70,
+        "序號": 8,
+        "Language": "東排灣語",
+        "Name": "伍樂香",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "信義國小",
+        "Phone": "03-4573780",
+        "Area": "中壢區"
+    },
+    {
+        "Index": 71,
+        "序號": 9,
+        "Language": "東排灣語",
+        "Name": "曾文章",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "中正國小",
+        "Phone": "03-4559313",
+        "Area": "中壢區、內壢區"
+    },
+    {
+        "Index": 72,
+        "序號": 10,
+        "Language": "中排灣語",
+        "Name": "蔚盈蓁",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "祥安國小",
+        "Phone": "03-4192136",
+        "Area": "中壢區、平鎮區"
+    },
+    {
+        "Index": 73,
+        "序號": 11,
+        "Language": "中排灣語",
+        "Name": "戴文村",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "石門國小",
+        "Phone": "03-4711752",
+        "Area": "龍潭區、大溪區、八德區"
+    },
+    {
+        "Index": 74,
+        "序號": 1,
+        "Language": "郡群布農語",
+        "Name": "馬美英",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "潛龍國小",
+        "Phone": "03-4792153",
+        "Area": "龍潭區、平鎮區、中壢區、大溪區"
+    },
+    {
+        "Index": 75,
+        "序號": 2,
+        "Language": "郡群布農語",
+        "Name": "余秀珠",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "龜山國小",
+        "Phone": "03-3203571",
+        "Area": "桃園市"
+    },
+    {
+        "Index": 76,
+        "序號": 3,
+        "Language": "丹群布農語",
+        "Name": "馬國榮",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "慈文國中",
+        "Phone": "03-3269340",
+        "Area": "平鎮區、中壢區、八德區"
+    },
+    {
+        "Index": 77,
+        "序號": 4,
+        "Language": "丹群布農語",
+        "Name": "馬佳伶",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "員樹林國小",
+        "Phone": "03-3801502",
+        "Area": "大溪區、八德區"
+    },
+    {
+        "Index": 78,
+        "序號": 5,
+        "Language": "郡群布農語",
+        "Name": "王璱珍",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    },
+    {
+        "Index": 79,
+        "序號": 6,
+        "Language": "郡群布農語",
+        "Name": "陳秀妹",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "南美國小",
+        "Phone": "03-3126250",
+        "Area": "龜山區、蘆竹區"
+    },
+    {
+        "Index": 80,
+        "序號": 7,
+        "Language": "郡群布農語",
+        "Name": "余秀蘭",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": "中壢區、八德區"
+    },
+    {
+        "Index": 81,
+        "序號": 1,
+        "Language": "太魯閣語",
+        "Name": "陳禧美",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "新埔國小",
+        "Phone": "03-3162972#213",
+        "Area": "桃園區、龜山區、蘆竹區、中壢區、大園區"
+    },
+    {
+        "Index": 82,
+        "序號": 2,
+        "Language": "太魯閣語",
+        "Name": "李小慧",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "普仁國小",
+        "Phone": "03-4563830",
+        "Area": "桃園區、平鎮區、中壢區、龍潭區、楊梅區、大溪區、八德區"
+    },
+    {
+        "Index": 83,
+        "序號": 3,
+        "Language": "太魯閣語",
+        "Name": "葉惠照",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "錦興國小",
+        "Phone": "03-2723067",
+        "Area": "八德區、蘆竹區"
+    },
+    {
+        "Index": 84,
+        "序號": 4,
+        "Language": "太魯閣語",
+        "Name": "馬馮愛花",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "上大國小",
+        "Phone": "03-4901174",
+        "Area": "觀音區、新屋區、大園區、中壢區"
+    },
+    {
+        "Index": 85,
+        "序號": 5,
+        "Language": "太魯閣語",
+        "Name": "謝金水",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "龜山國小",
+        "Phone": "03-3203571",
+        "Area": "龜山區、桃園區"
+    },
+    {
+        "Index": 86,
+        "序號": 1,
+        "Language": "南王卑南語",
+        "Name": "林純女",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "福源國小",
+        "Phone": "03-3297276",
+        "Area": "龜山區、桃園區、蘆竹區、中壢區"
+    },
+    {
+        "Index": 87,
+        "序號": 2,
+        "Language": "西群卑南語",
+        "Name": "林美蘭",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "瑞豐國小",
+        "Phone": "03-3682787",
+        "Area": "桃園市各區"
+    },
+    {
+        "Index": 88,
+        "序號": 3,
+        "Language": "南王卑南語",
+        "Name": "孫美華",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "山豐國小",
+        "Phone": "03-4691784",
+        "Area": "中壢區、平鎮區"
+    },
+    {
+        "Index": 89,
+        "序號": 4,
+        "Language": "南王卑南語",
+        "Name": "謝淑琴",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "忠貞國小",
+        "Phone": "03-4501450",
+        "Area": "中壢區、平鎮區、大溪區、觀音區、大園區"
+    },
+    {
+        "Index": 90,
+        "序號": 1,
+        "Language": "賽夏語",
+        "Name": "朱慧珍",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "龍岡國中",
+        "Phone": "03-4562137",
+        "Area": "中壢區、平鎮區、楊梅區、八德區、桃園區"
+    },
+    {
+        "Index": 91,
+        "序號": 2,
+        "Language": "賽夏語",
+        "Name": "日惠芬",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "大忠國小",
+        "Phone": "03-3635206",
+        "Area": "龍潭區、楊梅區"
+    },
+    {
+        "Index": 92,
+        "序號": 3,
+        "Language": "賽夏語",
+        "Name": "朱梅香",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": "桃園區、八德區、龜山區"
+    },
+    {
+        "Index": 93,
+        "序號": 1,
+        "Language": "霧臺魯凱語",
+        "Name": "杜太郎",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "光明國小",
+        "Phone": "03-3127066",
+        "Area": "桃園區"
+    },
+    {
+        "Index": 94,
+        "序號": 1,
+        "Language": "德固達雅語",
+        "Name": "謝麗卿",
+        "Identity": "專職族語教師",
+        "Main elementary schools": "瑞豐國小",
+        "Phone": "03-3682787",
+        "Area": "桃園市"
+    },
+    {
+        "Index": 95,
+        "序號": 1,
+        "Language": "噶瑪蘭語",
+        "Name": "陳江香蘭",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "南興國小",
+        "Phone": "03-3801721",
+        "Area": "大溪區、平鎮區"
+    },
+    {
+        "Index": 96,
+        "序號": 1,
+        "Language": "撒奇萊雅語",
+        "Name": "林言蓁",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "元生國小",
+        "Phone": "03-4625566",
+        "Area": "中壢區、平鎮區、桃園區"
+    },
+    {
+        "Index": 97,
+        "序號": 1,
+        "Language": "雅美語",
+        "Name": "曾以斯帖",
+        "Identity": "族語支援教師",
+        "Main elementary schools": "",
+        "Phone": "",
+        "Area": ""
+    }
+]
