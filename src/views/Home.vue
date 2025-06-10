@@ -168,27 +168,27 @@ function gsapFunction() {
 onMounted(() => {
   GetPageData();
 
-  if (window.navigator.userAgent.toLocaleLowerCase().indexOf("line") >= 0) {
-    Swal.fire(
-      {
-        title: "不支援此瀏覽器",
-        html: `<span class="text-red-700">不支援此瀏覽器<br>請按下確認鍵使用預設瀏覽器開啟</span><br>(建議使用Chrome、Firefox、Edge、Safari瀏覽器開啟本網站)`,
-        icon: "warning",
-        confirmButtonText: "確定",
-      }
-    ).then((res) => {
-      if (res.isConfirmed) {
-        window.location.href = "https://expogame.sssh.tyc.edu.tw/?openExternalBrowser=1";
-      }
-    });
-  }
+  // if (window.navigator.userAgent.toLocaleLowerCase().indexOf("line") >= 0) {
+  //   Swal.fire(
+  //     {
+  //       title: "不支援此瀏覽器",
+  //       html: `<span class="text-red-700">不支援此瀏覽器<br>請按下確認鍵使用預設瀏覽器開啟</span><br>(建議使用Chrome、Firefox、Edge、Safari瀏覽器開啟本網站)`,
+  //       icon: "warning",
+  //       confirmButtonText: "確定",
+  //     }
+  //   ).then((res) => {
+  //     if (res.isConfirmed) {
+  //       window.location.href = "https://cary0522.github.io/DemoSample/?openExternalBrowser=1";
+  //     }
+  //   });
+  // }
 
 });
 </script>
 <template>
   <UserPage>
     <div class="w-full flex justify-center items-center h-[60px] bg-[#e8d9ca] rounded-md">
-      <Vue3Marquee class="w-full" :vertical="true" :pause-on-hover="true">
+      <Vue3Marquee class="w-full" :vertical="true" :pause-on-hover="true" id="marquee">
         <router-link to="/announce/latestNews" v-for="data in TableData"
           class="mx-4 text-lg p-2 cursor-pointer  text-defaultColor hover:text-[#8c6b4f] font-extrabold">{{
             data.Title }}

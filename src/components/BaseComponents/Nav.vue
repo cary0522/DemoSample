@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import "animate.css"
 import logoImageUrl from "/images/logo.jpg";
@@ -84,6 +84,27 @@ onMounted(() => {
   }
 })
 
+// 變更路由時判斷選單開啟或關閉
+watch(() => router.currentRoute.value.path, () => {
+  if (window.innerWidth >= 768) {
+    isMenuVisible.value = true;
+    window.addEventListener("scroll", () => {
+      const header = document.getElementsByTagName("header")[0];
+      if (window.scrollY > LastScrollYData.value && window.scrollY > 150) {
+        header.classList.add("animate__animated", "animate__fadeOutUp");
+        header.classList.remove("animate__fadeInDown");
+        LastScrollYData.value = window.scrollY;
+      } else if (window.scrollY < LastScrollYData.value) {
+        header.classList.remove("animate__fadeOutUp");
+        header.classList.add("animate__fadeInDown");
+        LastScrollYData.value = window.scrollY;
+      }
+    });
+  } else {
+    isMenuVisible.value = false;
+  }
+})
+
 </script>
 <template>
   <header>
@@ -93,7 +114,8 @@ onMounted(() => {
       </div>
       <div class="flex justify-center items-center w-3/4 md:w-full">
         <router-link to="/" class="flex items-center">
-          <img loading="lazy" class="mx-2 h-14 object-contain rounded-full animate__animated animate__rollIn animate__fast"
+          <img loading="lazy"
+            class="mx-2 h-14 object-contain rounded-full animate__animated animate__rollIn animate__fast"
             :src="logoImageUrl" alt="logo" />
           <div class="text-start mx-2 w-auto animate__animated animate__fadeInLeft animate__fast">
             <p class="text-base md:text-2xl leading-0">
