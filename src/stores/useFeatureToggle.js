@@ -9,4 +9,6 @@ export const useFeatureToggle = defineStore("FeatureToggle", () => {
   return {
     FeatureData,
   };
+}, {
+  persist: true
 });

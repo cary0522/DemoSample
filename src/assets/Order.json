@@ -1,0 +1,92 @@
+[
+    {
+        "OrderId": "ORD20250717001",
+        "Customer": {
+            "Name": "王小明",
+            "Phone": "0912345678",
+            "Email": "xiaoming@example.com"
+        },
+        "Items": [
+            {
+                "ID": 2,
+                "Title": "香氛蠟燭",
+                "Image": "public/images/Estore/306.jpg",
+                "Price": 157,
+                "Value": 2,
+                "Subtotal": 314
+            },
+            {
+                "ID": 6,
+                "Title": "造型馬克杯",
+                "Image": "public/images/Estore/326.jpg",
+                "Price": 602,
+                "Value": 1,
+                "Subtotal": 602
+            }
+        ],
+        "TotalAmount": 916,
+        "Payment": {
+            "Method": "BankTransfer",
+            "BankInfo": {
+                "BankCode": "700",
+                "AccountName": "王小明",
+                "AccountNumber": "12345678901234"
+            },
+            "Status": "Pending"
+        },
+        "CreatedAt": "2025-07-17T14:03:00+08:00"
+    },
+    {
+        "OrderId": "ORD20250717001",
+        "Customer": {
+            "Name": "王小明",
+            "Phone": "0912345678",
+            "Email": "xiaoming@example.com"
+        },
+        "Items": [
+            {
+                "ID": 2,
+                "Title": "香氛蠟燭",
+                "Image": "public/images/Estore/306.jpg",
+                "Price": 157,
+                "Value": 2,
+                "Subtotal": 314
+            },
+            {
+                "ID": 2,
+                "Title": "薰衣草枕",
+                "Image": "public/images/Estore/311.jpg",
+                "Price": 595,
+                "Value": 1,
+                "Subtotal": 595
+            },
+            {
+                "ID": 2,
+                "Title": "手工餅乾盒",
+                "Image": "public/images/Estore/312.jpg",
+                "Price": 1016,
+                "Value": 1,
+                "Subtotal": 1016
+            },
+            {
+                "ID": 6,
+                "Title": "造型馬克杯",
+                "Image": "public/images/Estore/326.jpg",
+                "Price": 602,
+                "Value": 1,
+                "Subtotal": 602
+            }
+        ],
+        "TotalAmount": 2527,
+        "Payment": {
+            "Method": "BankTransfer",
+            "BankInfo": {
+                "BankCode": "700",
+                "AccountName": "王小明",
+                "AccountNumber": "12345678901234"
+            },
+            "Status": "Pending"
+        },
+        "CreatedAt": "2025-07-20T14:03:00+08:00"
+    }
+]

@@ -14,7 +14,7 @@ const props = defineProps(["BreadcrumbList"]);
         </li>
         <p v-if="index < props.BreadcrumbList.length - 1">／</p>
       </template>
-      <img src="/images/breaicon02.png" loading="lazy" alt="" class="w-[30px] ms-2">
+      <!-- <img src="/images/breaicon02.png" loading="lazy" alt="" class="w-[30px] ms-2"> -->
     </ul>
   </div>
 </template>

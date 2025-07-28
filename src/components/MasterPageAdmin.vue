@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import "../assets/style/MasterPageAdmin.css";
 import { reactive, ref } from "vue";
 import { useRouter } from "vue-router";
-import SettingJson from "@/assets/Setting.json";
-const DataJson = ref(SettingJson);
+
+import { useI18n } from "vue-i18n";
+const { t, locale } = useI18n();
 
 //接受參數MenuItem
 const props = defineProps(['MenuList']);
@@ -16,16 +17,25 @@ const MenuList = reactive([
     showGroupName: false,
     Items: [
       {
-        Name: "首頁",
-        Icon: ["fas", "house-chimney"],
-        Type: "2",
-        Path: "/",
-      },
-      {
         Name: "後台首頁",
         Icon: ["fas", "house-chimney"],
         Type: "2",
         Path: "/dp_index",
+      },
+      {
+        Name: '統計資訊',
+        Icon: ['fas', 'square-poll-horizontal'],
+        Path: '/statistics'
+      },
+      {
+        Name: '訂單管理',
+        Icon: ['fas', 'square-poll-horizontal'],
+        Path: '/statistics'
+      },
+      {
+        Name: '商品管理',
+        Icon: ['fas', 'square-poll-horizontal'],
+        Path: '/statistics'
       },
     ],
   },
@@ -38,11 +48,11 @@ const MenuList = reactive([
         Icon: ["fas", "user"],
         Path: "#",
       },
-      {
-        Name: "角色管理",
-        Icon: ["fas", "fingerprint"],
-        Path: "#",
-      },
+      // {
+      //   Name: "角色管理",
+      //   Icon: ["fas", "fingerprint"],
+      //   Path: "#",
+      // },
     ],
   },
 ]);
@@ -59,7 +69,7 @@ const toggleMenuVisibility = () => {
 //選單控制
 let isMenuVisible = ref(false);
 //Logo位置
-import logoImageUrl from "/images/logo.jpg";
+import logoImageUrl from "/images/logo.png";
 
 //從VueRouter取得PageName
 const router = useRouter();
@@ -85,57 +95,50 @@ window.addEventListener("load", () => {
 </script>
 
 <template>
-  <!--Header Start-->
-  <header>
-    <!--Logo-->
-    <div class="AdminHeaderBoxFloat">
-      <div class="AdminHeaderLogo">
-        <router-link to="/"><img loading="lazy" :src="logoImageUrl" alt="logo"
-            class='rounded-full object-contain' /></router-link>
+  <div id="adminPage">
+    <!--Header Start-->
+    <header>
+      <!--Title Start-->
+      <div class="AdminHeaderTitle">
+        <!--選單控制 開始-->
+        <div v-if="MenuList.length > 0" @click="toggleMenuVisibility" class="AdminMenuBar">
+          <v-icon icon="mdi-menu" />
+        </div>
+        <!--選單控制 結束-->
+        <div class="mx-6 min-w-[50px] max-w-[60px] object-contain">
+          <router-link to="/">
+            <img loading="lazy" class="mx-4 rounded-full object-contain" :src="logoImageUrl"
+              alt="桃園市政府原住民族教育資源中心logo" />
+          </router-link>
+        </div>
+        <div>
+          <div class="ms-2">{{ t(`WebTitle`) }}<br />後臺首頁</div>
+        </div>
       </div>
-    </div>
-    <!--Logo End-->
-    <!--Title Start-->
-    <div class="AdminHeaderTitle">
-      <div class="mx-4 md:hidden w-[50px] object-contain">
-        <router-link to="/"><img loading="lazy" class="mx-4 rounded-full object-contain" :src="logoImageUrl"
-            alt="logo" /></router-link>
+      <!--Title End-->
+    </header>
+    <!--Header End-->
+    <main class="h-screen flex">
+      <!--選單開始-->
+      <div v-show="isMenuVisible" class="AdminMenuBox">
+        <!--選單內容 開始-->
+        <div v-for="(Group, Index) in MenuList" :key="'Group_' + Group.Index">
+          <div class="AdminMenuGroupTitle" v-text="Group.groupName"></div>
+          <router-link v-for="Item in Group.Items" :to="`${Item.Path}`"
+            :class="{ MenuActive: currentRouteName == Item.Name }" class="AdminMenuItem">
+            <font-awesome-icon :icon="Item.Icon" class="min-w-[20px]" />
+            <span v-text="Item.Name"></span>
+          </router-link>
+          <hr v-if="Index + 1 < MenuList.length" />
+        </div>
+        <!--選單內容 結束-->
       </div>
-      <div>
-        <div>前端專案模板 | 說說而已科技有限公司</div>
-        <span class="font-normal text-sm md:text-base lg:text-lg">SSeyTemplate</span>
+      <!--選單結束-->
+      <!--內容開始-->
+      <div class="AdminContentBox">
+        <slot></slot>
       </div>
-    </div>
-    <!--Title End-->
-  </header>
-  <!--選單控制 開始-->
-  <div v-if="MenuList.length > 0" @click="toggleMenuVisibility" class="AdminMenuBar">
-    <font-awesome-icon :icon="['fas', 'bars']" />
+      <!--內容結束-->
+    </main>
   </div>
-  <!--選單控制 結束-->
-  <!--Header End-->
-  <main class="h-screen">
-    <!--選單開始-->
-    <div v-show="isMenuVisible" class="AdminMenuBox">
-      <!--選單遮罩-->
-      <!-- <div class="AdminMenuMask"></div> -->
-      <!--選單內容 開始-->
-      <div v-for="(Group, Index) in DataJson.menuList" :key="'Group_' + Group.Index">
-        <div class="AdminMenuGroupTitle" v-text="Group.groupName"></div>
-        <router-link v-for="Item in Group.items" :to="`${Item.path}/Setting`"
-          :class="{ MenuActive: currentRouteName == Item.name }" class="AdminMenuItem">
-          <font-awesome-icon :icon="Item.icon" />
-          <span v-text="Item.name"></span>
-        </router-link>
-        <hr v-if="Index + 1 < MenuList.length" />
-      </div>
-      <!--選單內容 結束-->
-    </div>
-    <!--選單結束-->
-    <!--內容開始-->
-    <div class="AdminContentBox">
-      <slot></slot>
-    </div>
-    <!--內容結束-->
-  </main>
 </template>

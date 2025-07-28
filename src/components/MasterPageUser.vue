@@ -12,17 +12,24 @@ const DataJson = ref(SettingJson);
 const router = useRouter();
 const currentRouteName = ref(router.currentRoute.value.name);
 document.getElementsByTagName("Title").innerHtml = currentRouteName.value;
-
+// 進入頁面後回到網頁最上方
+onMounted(() => {
+  const html = document.getElementsByTagName('html')
+  html[0].scrollTo({ top: 0, behavior: 'smooth' })
+})
 </script>
 <template>
-  <Nav v-model:SettingJson="DataJson"></Nav>
-  <main>
-    <!--內容開始-->
-    <div class="ContentBox">
-      <slot></slot>
-    </div>
-    <ToTheTop></ToTheTop>
-    <Footer :MenuList="DataJson.menuList"></Footer>
-    <!--內容結束-->
-  </main>
+  <div id="userPage">
+    <Nav v-model:SettingJson="DataJson"></Nav>
+    <main>
+      <!-- <a href="#C" title="中央內容區塊" id="AC" accesskey="C" style="">:::</a> -->
+      <!--內容開始-->
+      <div class="ContentBox" id="C">
+        <slot></slot>
+      </div>
+      <ToTheTop></ToTheTop>
+      <Footer :MenuList="DataJson.menuList"></Footer>
+      <!--內容結束-->
+    </main>
+  </div>
 </template>

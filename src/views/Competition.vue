@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, reactive, nextTick } from 'vue'
 import { useRouter } from 'vue-router'
 import UserPage from '@/components/MasterPageUser.vue'
 import LeftOptions from '@/components/BaseComponents/LeftOptions.vue'
@@ -13,6 +13,7 @@ import Table from '@/components/BaseComponents/Table.vue'
 import Pagination from '@/components/BaseComponents/Pagination.vue'
 import TeachersJson from '@/assets/Teachers.json'
 
+import PdfFlip from '@/components/BaseComponents/PdfFlip.vue'
 const router = useRouter()
 
 const OptionsList = ref([
@@ -60,7 +61,7 @@ const TableHeader = [
 ];
 
 const TableData = ref([])
-onMounted(() => {
+onMounted(async () => {
     TableData.value = TeachersJson
 })
 </script>
@@ -76,10 +77,8 @@ onMounted(() => {
                     <Table :-table-header="TableHeader" v-model:TableData="TableData"></Table>
                     <!-- <Pagination></Pagination> -->
                 </div>
-                <div v-else style="position:relative;padding-top:max(60%,324px);width:100%;height:0;" class="my-2">
-                    <iframe style="position:absolute;border:none;width:100%;height:100%;left:0;top:0;"
-                        src="https://online.fliphtml5.com/hluzz/nhly/" seamless="seamless" scrolling="no"
-                        frameborder="0" allowtransparency="true" allowfullscreen="true"></iframe>
+                <div v-else class="w-full">
+                    <PdfFlip pdfScr="/fake_ebook_100_pages.pdf"></PdfFlip>
                 </div>
             </div>
         </div>

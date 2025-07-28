@@ -3,40 +3,28 @@
 @tailwind utilities;
 
 @layer components {
-  body {
-    @apply md:overflow-hidden;
-  }
-
-  header {
-    @apply fixed w-screen h-[200px] z-20 bg-defaultBg;
-  }
-
   .AdminHeaderBoxFloat {
     @apply hidden md:block fixed top-[22px] z-30 left-[30px];
   }
 
   .AdminHeaderLogo {
-    @apply rotate-[45deg] w-[60px] bg-white h-[200px] shadow-[0_0px_0px_5px_#3E4F63] object-contain;
+    @apply relative rotate-[45deg] w-[60px] h-[150px];
   }
 
   .AdminHeaderLogo img {
-    @apply relative top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-[-45deg] object-contain max-w-[60px];
+    @apply absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] rotate-[-45deg];
   }
 
   .AdminHeaderTitle {
-    @apply text-white flex items-center text-base md:text-lg lg:text-xl relative left-[35px] md:left-[110px] top-[50%] translate-y-[-50%] font-bold;
-  }
-
-  main {
-    @apply flex;
+    @apply text-defaultColor flex items-center text-base md:text-lg lg:text-xl relative left-[35px] md:left-[110px] top-[50%] translate-y-[-50%] font-bold;
   }
 
   .AdminMenuBox {
-    @apply relative px-3 w-[250px] pt-3 md:pt-[50px] overflow-y-auto h-full shadow-gray-400 shadow-2xl;
+    @apply absolute md:relative text-sm 2xl:text-base top-[100px] pb-[100px] px-3 w-[250px] pt-3 overflow-y-auto h-lvh shadow-gray-400 shadow-2xl;
   }
 
   .AdminMenuMask {
-    @apply hidden md:block fixed top-[60px] left-0 w-[150px] h-[50px] bg-white z-10;
+    @apply hidden md:block fixed top-[60px] left-0 w-[150px] h-[200px] bg-white z-10;
   }
 
   .AdminMenuBox hr {
@@ -44,7 +32,7 @@
   }
 
   .AdminMenuBar {
-    @apply select-none md:hidden h-[200px] left-2 text-white text-2xl flex justify-center items-center fixed z-[50];
+    @apply select-none md:hidden h-[200px] left-2 text-defaultColor text-2xl flex justify-center items-center fixed z-[50];
   }
 
   .AdminMenuBar svg {
@@ -52,7 +40,7 @@
   }
 
   .AdminMenuGroupTitle {
-    @apply text-sm py-2 text-[#3E6EA8] font-bold;
+    @apply text-sm py-2 text-defaultColor font-bold;
   }
 
   .AdminMenuItem {
@@ -68,14 +56,11 @@
   }
 
   .AdminContentBox {
-    @apply absolute flex-grow w-full h-full overflow-y-auto md:ms-[250px] ms-0 px-2 pb-2 pt-[60px] z-10 top-0 left-0;
+    height: calc(100vh - 100px);
+    background-color: #eae8e8;
+    @apply relative top-[100px] left-0 flex flex-1 overflow-y-scroll ms-0 px-2 mb-[100px] z-10;
   }
 }
-
-.AdminContentBox {
-  background-image: url('/src/assets/Images/bg_image.jpg');
-}
-
 /* table,
 th,
 td {

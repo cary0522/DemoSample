@@ -21,7 +21,7 @@ function NextPage() {
 }
 </script>
 <template>
-    <div class="w-auto max-w-full flex justify-center my-4 mx-auto text-base text-gray-500">
+    <div class="w-auto max-w-full flex justify-center my-4 mx-auto text-base text-gray-500 ">
         <v-Pagination v-model="CurrentPage" :length="props.TotalPage" color="black" rounded="circle"
             @update:model-value="props.GetPageData" :total-visible="10">
             <template v-slot:prev>

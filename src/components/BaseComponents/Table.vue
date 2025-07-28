@@ -46,7 +46,7 @@ const SelectAll = function (event) {
 <template>
   <!-- 電腦版 公告總表 開始 -->
   <v-table class="my-4 w-full xl:m-2 overflow-x-auto rounded border animate__animated animate__fadeIn">
-    <thead style="background-color: #d8c4b5">
+    <thead style="background-color: #b9e1ff">
       <tr>
         <th class="text-center leading-8" style="font-size: medium" v-if="Setting">
           <input type="checkbox" @change="SelectAll($event)" />

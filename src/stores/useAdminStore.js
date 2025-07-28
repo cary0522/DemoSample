@@ -12,4 +12,6 @@ export const useAdminStore = defineStore("AdminStore", () => {
   return {
     AdminData,
   };
+}, {
+  persist: true
 });

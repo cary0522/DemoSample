@@ -31,12 +31,12 @@ import { useAdminStore } from "@/stores/useAdminStore";
 import { useFeatureToggle } from "@/stores/useFeatureToggle";
 import router from "@/router";
 
-const LoadingValue = ref(false);
+const LoadingValue = ref(true);
 const LastScrollYData = ref(0);
 
 // 監聽當頁面大小改變時動畫參數改變
 window.addEventListener("resize", () => {
-  gsapFunction();
+  // gsapFunction();
   if (window.innerWidth >= 768) {
     window.addEventListener("scroll", () => {
       const header = document.getElementsByTagName("header")[0];
@@ -94,9 +94,9 @@ const TableData = ref([]);
 function GetPageData() {
   if (type == 'locale') {
     TableData.value = LatestNewsJson.DataList;
-    nextTick(() => {
-      gsapFunction();
-    });
+    // nextTick(() => {
+    //   gsapFunction();
+    // });
     LoadingValue.value = false;
   } else {
     ApiHelper.Axios(
@@ -115,58 +115,65 @@ function GetPageData() {
   }
 }
 
-gsap.registerPlugin(ScrollTrigger);
-const TimeLine = gsap.timeline();
-function gsapFunction() {
-  TimeLine.fromTo(
-    ".sliderHeight",
-    {
-      scale: '.8'
-    },
-    {
-      scrollTrigger: {
-        trigger: "#announceTable",
-        start: "center center",
-        end: "bottom 40%",
-        scrub: 2,
-      },
-      scale: '1'
-    }
-  )
-    // .fromTo(
-    //   ".sliderHeight",
-    //   {
-    //     scale: '.8'
-    //   },
-    //   {
-    //     scrollTrigger: {
-    //       trigger: ".sliderMoment",
-    //       start: "bottom center",
-    //       end: "bottom 40%",
-    //       scrub: 2,
-    //     },
-    //     scale: '1'
-    //   }
-    // )
-    .fromTo(
-      ".sliderVideo",
-      {
-        scale: '.8'
-      },
-      {
-        scrollTrigger: {
-          trigger: ".sliderHeight",
-          start: "bottom center",
-          end: "bottom 40%",
-          scrub: 2,
-        },
-        scale: '1'
-      }
-    );
+// gsap.registerPlugin(ScrollTrigger);
+// const TimeLine = gsap.timeline();
+// function gsapFunction() {
+//   TimeLine.fromTo(
+//     ".sliderHeight",
+//     {
+//       scale: '.8'
+//     },
+//     {
+//       scrollTrigger: {
+//         trigger: "#announceTable",
+//         start: "center center",
+//         end: "bottom 40%",
+//         scrub: 2,
+//       },
+//       scale: '1'
+//     }
+//   )
+//     // .fromTo(
+//     //   ".sliderHeight",
+//     //   {
+//     //     scale: '.8'
+//     //   },
+//     //   {
+//     //     scrollTrigger: {
+//     //       trigger: ".sliderMoment",
+//     //       start: "bottom center",
+//     //       end: "bottom 40%",
+//     //       scrub: 2,
+//     //     },
+//     //     scale: '1'
+//     //   }
+//     // )
+//     .fromTo(
+//       ".sliderVideo",
+//       {
+//         scale: '.8'
+//       },
+//       {
+//         scrollTrigger: {
+//           trigger: ".sliderHeight",
+//           start: "bottom center",
+//           end: "bottom 40%",
+//           scrub: 2,
+//         },
+//         scale: '1'
+//       }
+//     );
+// }
+const ImageCount = ref(0);
+function ImgLoaded() {
+  ImageCount.value++
+  if (ImageCount.value == 3) {
+    LoadingValue.value = false;
+  }
 }
 
 onMounted(() => {
-  GetPageData();
+  // GetPageData();
 
   // if (window.navigator.userAgent.toLocaleLowerCase().indexOf("line") >= 0) {
   //   Swal.fire(
@@ -187,20 +194,28 @@ onMounted(() => {
 </script>
 <template>
   <UserPage>
-    <div class="w-full flex justify-center items-center h-[60px] bg-[#e8d9ca] rounded-md">
+    <!-- <div class="w-full flex justify-center items-center h-[60px] bg-[#e8d9ca] rounded-md">
       <Vue3Marquee class="w-full" :vertical="true" :pause-on-hover="true" id="marquee">
         <router-link to="/announce/latestNews" v-for="data in TableData"
           class="mx-4 text-lg p-2 cursor-pointer  text-defaultColor hover:text-[#8c6b4f] font-extrabold">{{
             data.Title }}
         </router-link>
       </Vue3Marquee>
+    </div> -->
+    <!-- <Banner id="BannerImg"></Banner> -->
+    <div class="flex w-full justify-center items-center max-w-full my-32">
+      <img src="/images/Estore/292.jpg" @load="ImgLoaded" alt="" id="banner1"
+        class="object-fit m-4 w-1/4 max-w-[200px] h-[250px]">
+      <img src="/images/Estore/180.jpg" @load="ImgLoaded" alt="" id="banner2"
+        class="object-fit m-4 w-1/4 max-w-[200px] h-[250px]">
+      <img src="/images/Estore/157.jpg" @load="ImgLoaded" alt="" id="banner3"
+        class="object-fit m-4 w-1/4 max-w-[200px] h-[250px]">
     </div>
-    <Banner id="BannerImg"></Banner>
-    <div id="announceTable" class="w-full md:w-4/5 mx-auto" v-if="TableData.length > 0">
+    <!-- <div id="announceTable" class="w-full md:w-4/5 mx-auto" v-if="TableData.length > 0">
       <Table :-table-header="TableHeader" v-model:TableData="TableData"></Table>
-    </div>
-    <div class="w-full justify-start mb-16" id="sliderArea">
-      <!-- <div
+    </div> -->
+    <!-- <div class="w-full justify-start mb-16" id="sliderArea"> -->
+    <!-- <div
         class="sliderMoment w-4/5 min-h-96 h-auto border-dashed border-4 mx-auto my-4 rounded-xl text-center items-start justify-start flex flex-wrap">
         <div class="flex flex-wrap items-end justify-between w-full">
           <Breadcrumb :-breadcrumb-list="['原住民族相關訊息']" class="mx-4 w-full"></Breadcrumb>
@@ -209,7 +224,7 @@ onMounted(() => {
             class="bg-defaultButton rounded p-4 m-4 cursor-pointer hover:scale-105">MORE</router-link>
         </div>
       </div> -->
-      <div
+    <!-- <div
         class="sliderHeight w-4/5 min-h-96 h-auto border-dashed border-4 mx-auto my-4 rounded-xl text-center items-start justify-start flex flex-wrap">
         <Breadcrumb :-breadcrumb-list="['教材資源']" class="mx-4 w-full"></Breadcrumb>
         <div class="flex flex-wrap items-end justify-start w-full">
@@ -235,10 +250,23 @@ onMounted(() => {
             class="bg-defaultButton rounded p-4 m-4 cursor-pointer hover:scale-105 mx-auto">{{ t(`${'更多'}`
             ) }}</router-link>
         </div>
-      </div>
-    </div>
-    <!-- 讀取畫面 開始 -->
-    <Loading :Loading="LoadingValue" />
-    <!-- 讀取畫面 結束 -->
+      </div> -->
+    <!-- </div> -->
   </UserPage>
+  <!-- 讀取畫面 開始 -->
+  <Loading :Loading="LoadingValue" />
+  <!-- 讀取畫面 結束 -->
 </template>
+<style>
+#banner1 {
+  border-radius: 37% 63% 51% 49% / 85% 16% 84% 15%;
+}
+
+#banner2 {
+  border-radius: 33% 67% 59% 41% / 60% 31% 69% 40%;
+}
+
+#banner3 {
+  border-radius: 51% 49% 30% 70% / 23% 69% 31% 77%;
+}
+</style>

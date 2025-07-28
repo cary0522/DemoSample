@@ -1,7 +1,7 @@
 <script setup>
 const props = defineProps(['PictureSrc'])
 
-import Src from '/images/logo.jpg'
+import Src from '/images/logo.png'
 </script>
 
 <template>

@@ -10,6 +10,9 @@ import Logo from '@/components/InfoPage/Logo.vue'
 import Activity from './Activity.vue'
 import Contact from '@/components/InfoPage/Contact.vue'
 import Breadcrumb from '@/components/BaseComponents/Breadcrumb.vue'
+import QAItem from '@/components/BaseComponents/QAItem.vue'
+
+import QAJson from '@/assets/QA.json'
 
 const router = useRouter()
 
@@ -23,16 +26,18 @@ const OptionsList = ref([
 <template>
     <div>
         <UserPage>
-            <div class="flex w-full">
-                <LeftOptions :OptionsList="OptionsList" class="w-1/3" />
+            <div class="flex w-4/5 mx-auto">
                 <div class="w-full flex flex-wrap">
-                    <Breadcrumb :-breadcrumb-list="['認識我們', router.currentRoute.value.meta.title]" class="w-full">
+                    <Breadcrumb :-breadcrumb-list="['幫助中心']" class="w-full">
                     </Breadcrumb>
-                    <!-- <Search class="w-full"></Search> -->
-                    <Calendar v-if="router.currentRoute.value.path === '/about/introduction'" />
+                    <Search class="w-full"></Search>
+                    <div v-for="question in QAJson" :key="question.id" class="w-full">
+                        <QAItem :question="question"></QAItem>
+                    </div>
+                    <!-- <Calendar v-if="router.currentRoute.value.path === '/about/introduction'" />
                     <Organization v-if="router.currentRoute.value.path === '/about/mission'" />
                     <Logo v-if="router.currentRoute.value.path === '/about/division'" />
-                    <Contact v-if="router.currentRoute.value.path === '/about/contact'"></Contact>
+                    <Contact v-if="router.currentRoute.value.path === '/about/contact'"></Contact> -->
                 </div>
             </div>
         </UserPage>

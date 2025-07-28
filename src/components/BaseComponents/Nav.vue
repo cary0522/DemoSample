@@ -2,7 +2,7 @@
 import { onMounted, ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import "animate.css"
-import logoImageUrl from "/images/logo.jpg";
+import logoImageUrl from "/images/logo.png";
 import Link from "@/components/BaseComponents/Link.vue";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
@@ -108,11 +108,16 @@ watch(() => router.currentRoute.value.path, () => {
 </script>
 <template>
   <header>
-    <div class="HeaderTitle w-full">
-      <div v-if="model.menuList.length > 0" @click="toggleMenuVisibility" class="MenuBar">
+    <!-- <div class="flex justify-between w-full items-center p-2">
+      <a href="#U" title="右上方功能區塊" id="AU" accesskey="U" style="">:::</a>
+      <input type="text" id="S" placeholder="關鍵字搜尋" value="關鍵字搜尋" title="關鍵字搜尋：文章關鍵字搜尋" accesskey="S"
+        class="me-12 w-[200px] h-[24px] border rounded-lg mt-6">
+    </div> -->
+    <div class="printNone HeaderTitle w-full" id="U">
+      <!-- <div v-if="model.menuList.length > 0" @click="toggleMenuVisibility" class="MenuBar">
         <font-awesome-icon :icon="['fas', 'bars']" />
-      </div>
-      <div class="flex justify-center items-center w-3/4 md:w-full">
+      </div> -->
+      <div class="flex justify-center items-center w-full md:w-1/2 px-1 my-2">
         <router-link to="/" class="flex items-center">
           <img loading="lazy"
             class="mx-2 h-14 object-contain rounded-full animate__animated animate__rollIn animate__fast"
@@ -126,10 +131,16 @@ watch(() => router.currentRoute.value.path, () => {
           </div>
         </router-link>
       </div>
+      <div class="flex items-center justify-center text-sm sm:text-base w-full md:w-1/2">
+        <router-link v-for="(item, index) in model.menuList" :key="'Item_' + index" class="mx-1 cursor-pointer hover:text-defaultHoverColor" :to="item.path">
+          <font-awesome-icon :icon="item.icon" />
+          {{ t(`menuList.${item.groupName}`) }}
+        </router-link>
+      </div>
       <!--電腦選單內容 開始-->
-      <div v-show="isMenuVisible"
-        class="hidden md:flex flex-row flex-wrap md:justify-center text-defaultColor text-base 2xl:text-lg w-full text-center h-100% mx-4 animate__animated animate__fadeInLeft animate__fast">
-        <div v-for="(Group, Index) in model.menuList" :key="'Group_' + Index" @mouseover="Group.ShowItem = true"
+      <!-- <div v-show="isMenuVisible"
+        class="hidden md:flex flex-row flex-wrap md:justify-center text-defaultColor text-base 2xl:text-lg w-full text-center h-100% mx-4 animate__animated animate__fadeInLeft animate__fast"> -->
+        <!-- <div v-for="(Group, Index) in model.menuList" :key="'Group_' + Index" @mouseover="Group.ShowItem = true"
           @mouseleave="Group.ShowItem = false" class="transition-all mx-1 relative py-4">
           <div :class="{ 'hover:bg-gray-300': Group.items.length == 0 }"
             class="hover:bg-gray-300 cursor-pointer me-2 my-1 py-2" @click="Group.ShowItem = !Group.ShowItem">
@@ -151,12 +162,12 @@ watch(() => router.currentRoute.value.path, () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- <a href="/login" class="transition-all hover:bg-gray-300 cursor-pointer me-2 my-1">
           <font-awesome-icon :icon="['fas', 'right-to-bracket']" />
           系統登入</a> -->
-        <v-select v-model="locale" :items="LocaleList" item-title="key" item-value="value" variant="underlined"
-          max-width="150" class="mx-2 mt-2"></v-select>
+        <!-- <v-select v-model="locale" :items="LocaleList" item-title="key" item-value="value" variant="underlined"
+          max-width="150" class="mx-2 mt-2"></v-select> -->
         <!-- <div v-if="locale == 'ch'" class="hidden lg:block mx-1 my-2 py-4">
           <span @click="locale = 'ch'" @keydown.enter="locale = 'ch'"
             class="hover:underline underline-offset-8 underline" tabindex="0">中文</span>
@@ -171,12 +182,12 @@ watch(() => router.currentRoute.value.path, () => {
           <span @click="locale = 'en'" @keydown.enter="locale = 'en'"
             class="hover:underline underline-offset-8 underline" tabindex="0">English</span>
         </div> -->
-      </div>
+      <!-- </div> -->
       <!--電腦選單內容 結束-->
       <!--手機選單內容 開始-->
-      <div v-show="isMenuVisible" id="mobileMenu"
-        class="md:hidden flex flex-col justify-start absolute my-[105px] pb-[80px] top-0 left-[-2rem] text-defaultColor text-xl w-full text-start bg-defaultBg/90 rounded overflow-x-auto overflow-y-scroll animate__animated animate__fadeInLeft animate__fast z-50">
-        <div v-for="(Group, Index) in model.menuList" :key="'Group_' + Index" class="transition-all">
+      <!-- <div v-show="isMenuVisible" id="mobileMenu"
+        class="md:hidden flex flex-col justify-start absolute my-[105px] pb-[80px] top-0 left-[-2rem] text-defaultColor text-xl w-full text-start bg-defaultBg/90 rounded overflow-x-auto overflow-y-scroll animate__animated animate__fadeInLeft animate__fast z-50"> -->
+        <!-- <div v-for="(Group, Index) in model.menuList" :key="'Group_' + Index" class="transition-all">
           <div class="cursor-pointer my-3" @click="Group.ShowItem = !Group.ShowItem">
             <Link :path="Group.path || ''" class="relative">
             <div>
@@ -196,17 +207,17 @@ watch(() => router.currentRoute.value.path, () => {
             </div>
             </Link>
           </div>
-        </div>
+        </div> -->
         <!-- <router-link to="/login" class="transition-all hover:bg-gray-300 cursor-pointer me-2 my-1">
           <font-awesome-icon :icon="['fas', 'right-to-bracket']" />
           系統登入</router-link> -->
-      </div>
+      <!-- </div> -->
       <!--手機選單內容 結束-->
       <!-- 手機板切換語言 開始 -->
-      <div
-        class="fixed top-[-70px] left-[-35px] w-full h-auto flex justify-center px-2 text-sm 2xl:text-base font-bold text-black md:hidden">
-        <v-select v-model="locale" :items="LocaleList" item-title="key" item-value="value" variant="underlined"
-          max-width="150" class="ms-auto me-2"></v-select>
+      <!-- <div
+        class="fixed top-[-70px] left-[-35px] w-full h-auto flex justify-center px-2 text-sm 2xl:text-base font-bold text-black md:hidden"> -->
+        <!-- <v-select v-model="locale" :items="LocaleList" item-title="key" item-value="value" variant="underlined"
+          max-width="150" class="ms-auto me-2"></v-select> -->
         <!-- <a href="" class="mx-1" @click.prevent="locale = 'en'"
           :class="locale == 'en' ? 'underline underline-offset-4' : ''">English</a>
         <a href="" class="mx-1" @click.prevent="locale = 'ch'"
@@ -217,7 +228,7 @@ watch(() => router.currentRoute.value.path, () => {
         <a href="/Login" class="mx-1" v-else>{{
           t('登入')
         }}</a> -->
-      </div>
+      <!-- </div> -->
       <!-- 手機板切換語言 結束 -->
     </div>
   </header>

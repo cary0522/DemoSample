@@ -1,15 +1,21 @@
 import { createRouter, createWebHistory, createWebHashHistory } from "vue-router";
 import Home from "@/views/Home.vue";
-import Info from "@/views/Info.vue";
+import Info from "@/views/Help.vue";
 import Announce from "@/views/Announce.vue";
 import Competition from "@/views/Competition.vue";
-import Fair from "@/views/Fair.vue";
+import Fair from "@/views/Link.vue";
 import Celebration from "@/views/Celebration.vue";
 import Activity from "@/views/Activity.vue";
 import Serve from "@/views/Serve.vue";
 import Dp_index from "@/views/Dp_index.vue";
 import TrafficSetting from "@/components/Admin/TrafficSetting.vue";
 import Download from "@/views/Download.vue";
+import Cart from "@/views/Cart.vue";
+import Personal from "@/views/Personal.vue";
+import Production from "@/views/Production.vue";
+import Statistics from "@/components/Admin/Statistics.vue";
+import Link from "@/views/Link.vue";
+import Help from "@/views/Help.vue";
 
 const router = createRouter({
   // history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,22 +28,40 @@ const router = createRouter({
       meta: { title: "桃園市原住民教育資源中心" },
     },
     {
-      path: "/about",
-      name: "info",
-      component: Info,
-      meta: { title: "認識我們" },
+      path: "/cart",
+      name: "cart",
+      component: Cart,
+      meta: { title: "購物車" },
     },
     {
-      path: "/about/introduction",
-      name: "Center Introduction",
-      component: Info,
-      meta: { title: "中心簡介" },
+      path: "/personal",
+      name: "personal",
+      component: Personal,
+      meta: { title: "個人中心" },
     },
     {
-      path: "/about/mission",
-      name: "Central Mission",
-      component: Info,
-      meta: { title: "中心任務" },
+      path: "/help",
+      name: "help",
+      component: Help,
+      meta: { title: "幫助中心" },
+    },
+    {
+      path: "/Link",
+      name: "Link",
+      component: Link,
+      meta: { title: "好站連結" },
+    },
+    {
+      path: "/production",
+      name: "production",
+      component: Production,
+      meta: { title: "產品頁面" },
+    },
+    {
+      path: "/statistics",
+      name: "Statistics",
+      component: Statistics,
+      meta: { title: "統計資訊" },
     },
     {
       path: "/about/division",

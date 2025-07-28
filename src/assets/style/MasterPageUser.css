@@ -3,22 +3,9 @@
 @tailwind utilities;
 
 @layer components {
-  body {
-    @apply overflow-hidden;
-  }
-
-  header {
-    @apply fixed w-screen h-[200px] z-20;
-  }
-
   .HeaderTitle {
-    @apply text-defaultColor flex md:block items-center justify-around text-base md:text-lg relative left-[35px] md:left-[0px] top-[50%] translate-y-[-50%] font-bold;
+    @apply text-defaultColor md:flex items-center justify-between text-base md:text-lg relative top-[50%] translate-y-[-50%] font-bold;
   }
-
-  main {
-    @apply flex flex-wrap;
-  }
-
   .MenuBox {
     @apply fixed overflow-y-hidden md:overflow-visible text-start md:text-center left-0 md:flex h-[88%] rounded-r-2xl md:rounded-none w-5/6 md:w-full md:h-auto z-20 top-[150px] overflow-x-auto bg-white/90;
   }
@@ -40,7 +27,7 @@
   }
 
   .ContentBox {
-    @apply relative w-full h-full overflow-y-hidden px-1 md:px-8 pt-[280px] md:pt-[200px] z-0;
+    @apply relative w-full h-full overflow-y-hidden px-1 md:px-8 pt-[200px] z-0;
   }
 
   .MenuActive {
@@ -50,10 +37,10 @@
 
 .ContentBox,
 header {
-  /* background-color: 	#eae8e8; */
-  background-image: url("/images/bg.png");
+  background-color: 	rgb(234, 232, 232);
+  /* background-image: url("/images/bg.jpg");
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 .ContentBox::-webkit-scrollbar {

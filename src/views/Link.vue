@@ -29,13 +29,13 @@ const OptionsList = ref([
 </script>
 <template>
     <UserPage>
-        <div class="flex w-full">
-            <LeftOptions :OptionsList="OptionsList" class="w-1/3" />
+        <div class="flex w-4/5 mx-auto">
+            <!-- <LeftOptions :OptionsList="OptionsList" class="w-1/3" /> -->
             <div class="w-full flex flex-wrap">
                 <Search class="w-full" />
                 <Breadcrumb :-breadcrumb-list="['好站連結', router.currentRoute.value.meta.title]" class="w-full">
                 </Breadcrumb>
-                <div class="w-full md:flex md:flex-wrap min-h-[150px]">
+                <!-- <div class="w-full md:flex md:flex-wrap min-h-[150px]">
                     <div v-for="link in LinkData" class="w-full md:w-1/2">
                         <a :href="link.path" class="flex items-center m-4" target="_blank" rel="noopener noreferrer">
                             <img loading="lazy" :src="link.image" alt="" class="w-[50px] h-[50px] rounded-full">
@@ -45,6 +45,18 @@ const OptionsList = ref([
                             </p>
                         </a>
                     </div>
+                </div> -->
+
+                <div class="w-full justify-start items-center">
+                    <a href="https://www.tysh.tyc.edu.tw/ischool/publish_page/0/" class="flex items-center m-4"
+                        target="_blank" rel="noopener noreferrer">
+                        <img loading="lazy" src="/images/LinkLogos/32.png" alt=""
+                            class="w-[50px] h-[50px] rounded-full">
+                        <p
+                            class="text-defaultColor font-black text-base md:text-xl mx-2 hover:text-defaultHoverColor hover:text-2xl transition-all">
+                            桃園市立桃園高級中等學校
+                        </p>
+                    </a>
                 </div>
             </div>
         </div>

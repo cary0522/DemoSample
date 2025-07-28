@@ -3,35 +3,35 @@
         "id": 1,
         "title": "相簿1",
         "content": "相簿說明1",
-        "img": "./images/logo.jpg",
+        "img": "./images/logo.png",
         "link": ""
     },
     {
         "id": 2,
         "title": "相簿2",
         "content": "相簿說明2",
-        "img": "./images/logo.jpg",
+        "img": "./images/logo.png",
         "link": ""
     },
     {
         "id": 3,
         "title": "相簿3",
         "content": "相簿說明3",
-        "img": "./images/logo.jpg",
+        "img": "./images/logo.png",
         "link": ""
     },
     {
         "id": 4,
         "title": "相簿4",
         "content": "相簿說明4",
-        "img": "./images/logo.jpg",
+        "img": "./images/logo.png",
         "link": ""
     },
     {
         "id": 5,
         "title": "相簿5",
         "content": "相簿說明5",
-        "img": "./images/logo.jpg",
+        "img": "./images/logo.png",
         "link": ""
     }
 ]

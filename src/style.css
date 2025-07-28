@@ -41,12 +41,25 @@
     @apply font-mono;
   }
 
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  #userPage header {
+    @apply fixed w-full h-[200px] z-20;
+  }
+
+  #adminPage header {
+    @apply fixed w-full h-[100px] z-20;
+  }
+
+
   .wrap {
-    @apply bg-white/80 min-w-full md:min-w-[90%] overflow-y-hidden min-h-[200px] h-auto p-4 rounded-xl pt-4 px-4 font-bold text-xs sm:text-sm md:text-lg lg:text-xl tracking-wider text-defaultColor shadow-lg;
+    @apply bg-white/80 w-11/12 mx-2 mb-4 grow overflow-y-hidden min-h-[200px] h-fit p-4 rounded-xl font-bold text-xs sm:text-sm md:text-lg lg:text-xl tracking-wider text-defaultColor shadow-lg;
   }
 
   .Loading {
-    @apply w-full h-full fixed top-0 left-0 z-[100] flex flex-wrap justify-center items-center bg-white bg-opacity-90 text-2xl text-defaultColor font-bold;
+    @apply w-full h-screen fixed top-0 left-0 z-[100] flex flex-wrap justify-center items-center bg-white/80 bg-opacity-90 text-2xl text-defaultColor font-bold;
   }
 
   @media print {
@@ -57,8 +70,9 @@
     .printOnly {
       display: block !important;
       overflow-y: hidden;
-      margin: 0 auto 0 auto;
+      margin: 0 !important;
       border: none;
+      break-inside: avoid;
     }
 
     .printNone {
@@ -67,8 +81,8 @@
   }
 
   @page {
-    margin: 0.5cm;
-    size: A4 landscape;
+    margin: 0cm;
+    size: A4 portrait;
   }
 
   ::-webkit-scrollbar {

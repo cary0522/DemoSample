@@ -7,8 +7,9 @@ const { t } = useI18n();
 const props = defineProps(["MenuList"]);
 </script>
 <template>
-  <div id="footer" class="flex flex-wrap text-center min-h-[200px] h-auto sticky bottom-0 mx-0 pb-16">
-    <div class="flex flex-wrap lg:flex-nowrap w-full justify-start sm:ms-4 2xl:mx-auto items-start">
+  <div id="footer" class="printNone flex flex-wrap text-center min-h-[180px] h-auto sticky bottom-0 mx-0 pb-16 pt-4">
+    <!-- <a href="#Z" title="下方功能區塊" id="AZ" accesskey="Z">:::</a> -->
+    <!-- <div class="flex flex-wrap lg:flex-nowrap w-full justify-start sm:ms-4 2xl:mx-auto items-start" id="Z">
       <div v-for="item in props.MenuList"
         class="my-2 mx-auto w-full lg:w-auto max-w-[200px] flex flex-wrap text-defaultColor">
         <p
@@ -23,14 +24,15 @@ const props = defineProps(["MenuList"]);
           </li>
         </ul>
       </div>
-    </div>
-    <div class="m-2 w-full">
-      <div class="flex flex-wrap text-center w-full justify-center">
-        <p class="mx-2">{{ t('桃園市原住民族教育資源中心') }}</p>
-        <p class="mx-2">{{ t('地址') }}：335001 {{ t('桃園市大溪區仁義里介壽路214號') }}</p>
-        <p class="mx-2">{{ t('電話') }}：03-3892762 {{ t('傳真') }}：03-3906990</p>
+    </div> -->
+    <div class="m-2 w-full text-defaultColor font-black">
+      <div class="text-center w-full justify-center">
+        <p class="mx-2">桃園高中</p><br>
+        <p class="mx-2">{{ t('地址') }}：335001 {{ t('桃園市大溪區仁義里介壽路214號') }}</p><br>
+        <p class="mx-2">{{ t('電話') }}：03-3892762 {{ t('傳真') }}：03-3906990</p><br>
+        <router-link to="/dp_index" class="mx-2">後臺登入</router-link>
       </div>
-      <p>{{ t('瀏覽器建議') }}</p>
+      <!-- <p>{{ t('瀏覽器建議') }}</p>
       <div class="mx-auto w-full flex justify-center items-center">
         <p>瀏覽人次：</p>
         <a href="https://cn.web-counter.net" title="計數器">
@@ -41,7 +43,7 @@ const props = defineProps(["MenuList"]);
         <a href="#" title="無障礙網站">
           <img loading="lazy" src="/images/AA.png" alt="(網站通過檢測的範圍)通過A/AA/AAA無障礙網頁檢測" width="88" height="31">
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -54,7 +56,7 @@ const props = defineProps(["MenuList"]);
 }
 
 #footer {
-  background-image: url('/images/footer.png');
+  background-color: #eae8e8;
   background-position: bottom;
   background-size: cover;
 }

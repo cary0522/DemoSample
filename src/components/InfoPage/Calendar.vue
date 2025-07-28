@@ -22,6 +22,5 @@ import AreaTitle from "@/components/BaseComponents/AreaTitle.vue";
             </ul>
         </div>
         <AreaTitle :titleContent="'組織架構'"></AreaTitle>
-        <img loading="lazy" src="../../../public/images/organize.png">
     </div>
 </template>

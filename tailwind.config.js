@@ -7,9 +7,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        defaultColor: "#3A2A1C",
+        defaultColor:"#4076cb" ,
         defaultBg: "#F2F2F2",
-        defaultButton: "#c5a58a",
+        defaultButton: "#b9e1ff",
+        defaultBtnHover: "#f9f871",
+        defaultHoverColor:"#8cb1ed",
+        defaultCancel: "#eb98ac"
       },
     },
   },

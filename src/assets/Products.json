@@ -1,0 +1,82 @@
+[
+  {
+    "ID": 1,
+    "Title": "粉紅甜心杯",
+    "Price": 1115,
+    "Max": 5,
+    "Purchased": 11,
+    "Image": "public/images/Estore/305.jpg"
+  },
+  {
+    "ID": 2,
+    "Title": "香氛蠟燭",
+    "Price": 157,
+    "Max": 24,
+    "Purchased": 52,
+    "Image": "public/images/Estore/306.jpg"
+  },
+  {
+    "ID": 3,
+    "Title": "薰衣草枕",
+    "Price": 595,
+    "Max": 92,
+    "Purchased": 29,
+    "Image": "public/images/Estore/311.jpg"
+  },
+  {
+    "ID": 4,
+    "Title": "手工餅乾盒",
+    "Price": 1016,
+    "Max": 95,
+    "Purchased": 6,
+    "Image": "public/images/Estore/312.jpg"
+  },
+  {
+    "ID": 5,
+    "Title": "療癒系盆栽",
+    "Price": 396,
+    "Max": 42,
+    "Purchased": 8,
+    "Image": "public/images/Estore/319.jpg"
+  },
+  {
+    "ID": 6,
+    "Title": "造型馬克杯",
+    "Price": 602,
+    "Max": 49,
+    "Purchased": 29,
+    "Image": "public/images/Estore/326.jpg"
+  },
+  {
+    "ID": 7,
+    "Title": "萌寵玩偶",
+    "Price": 407,
+    "Max": 64,
+    "Purchased": 70,
+    "Image": "public/images/Estore/334.jpg"
+  },
+  {
+    "ID": 8,
+    "Title": "質感筆記本",
+    "Price": 890,
+    "Max": 64,
+    "Purchased": 29,
+    "Image": "public/images/Estore/336.jpg"
+  },
+  {
+    "ID": 9,
+    "Title": "天然沐浴皂",
+    "Price": 749,
+    "Max": 46,
+    "Purchased": 50,
+    "Image": "public/images/Estore/338.jpg"
+  },
+  {
+    "ID": 10,
+    "Title": "時尚帆布袋",
+    "Price": 1239,
+    "Max": 49,
+    "Purchased": 60,
+    "Image": "public/images/Estore/357.jpg"
+  }
+]
